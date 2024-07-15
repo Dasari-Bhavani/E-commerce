@@ -5,11 +5,18 @@ LuxeLiving Decor: Website Documentation
 Overview
 LuxeLiving Decor is a modern e-commerce platform dedicated to providing a wide range of high-quality home products. Our website is designed to offer an intuitive and seamless shopping experience for all your home decor and furniture needs.
 
+
+
+
 Website Structure
 Home Page
 Description: The home page serves as the introduction to LuxeLiving Decor, featuring an overview of the website and its offerings. It includes a brief description of our mission, highlights popular categories, and provides easy navigation to various sections of the site.
+
+
+
 Living Room Page
 Furniture: This page focuses on furnishing your living room with elegant and functional pieces. Categories include:
+
 Sofa Sets: Stylish and comfortable options to suit various tastes.
 TV Stands: Functional and attractive stands to complement your entertainment setup.
 Tables: A selection of coffee tables, end tables, and side tables.
