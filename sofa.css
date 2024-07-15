@@ -1,0 +1,519 @@
+/* * {
+    box-sizing: border-box;
+    /* margin: 0;
+    padding: 0;
+    height: 100%; 
+  }
+  body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: #333; 
+  } */
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    position: relative; /* Ensure body is the reference point for the fixed sidebar */
+}
+
+/* Header styles */
+header {
+    background-color: #607d8b; /* Updated color */
+    color: white;
+    padding-bottom: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* First Navbar styles (Top Navbar) */
+.top-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border-bottom: 1px solid #444;
+}
+
+.logo img {
+    height: 50px; /* Adjust height as needed */
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 400px; /* Adjust max-width as needed */
+    margin: 0 20px;
+}
+
+.search-bar input[type="text"] {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #555;
+    width: calc(100% - 110px); /* Adjust based on button width */
+}
+
+.search-bar button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #555;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.search-bar button:hover {
+    background-color: #777;
+}
+
+.auth-buttons {
+    display: flex;
+}
+
+.auth-buttons button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #555;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.auth-buttons button:hover {
+    background-color: #777;
+}
+
+/* Second Navbar styles (Bottom Navbar) */
+.bottom-navbar {
+    background-color: #444;
+    padding: 10px 0;
+}
+
+.bottom-navbar nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+.bottom-navbar nav ul li {
+    margin: 0 15px;
+}
+
+.bottom-navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    background-color: #555;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.bottom-navbar nav ul li a:hover {
+    background-color: #777;
+}
+
+.bottom-navbar .fa-home {
+    margin-right: 15px; /* Space between "All" and the icon */
+}
+
+/* Sidebar styles */
+.popup-menu {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position to overlay on top */
+    top: 0;
+    left: 0;
+    height: 100%; /* Full height */
+    width: 250px; /* Width of the sidebar */
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    z-index: 1000; /* Ensure it is above other content */
+    overflow-y: auto; /* Scroll if content overflows */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Optional: for visual effect */
+}
+
+/* Sidebar menu styles */
+.popup-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.popup-menu ul li {
+    margin: 10px 0;
+}
+
+.popup-menu ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.popup-menu ul li a:hover {
+    background-color: #555;
+}
+
+/* Main content styles */
+main {
+    
+    padding: 80px 20px 20px;
+    /* max-width: 800px; */
+    margin: 2px auto 20px; /* Adjust top margin for header height */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+main p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .top-navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-bar {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .search-bar input[type="text"] {
+        width: calc(100% - 110px); /* Adjust based on button width */
+    }
+
+    .search-bar button {
+        width: 100px;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    .auth-buttons button {
+        margin: 5px 0;
+    }
+
+    .bottom-navbar {
+        padding: 10px;
+    }
+
+    .bottom-navbar nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .bottom-navbar nav ul li {
+        margin: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        height: 40px;
+    }
+
+    .search-bar input[type="text"] {
+        padding: 6px;
+    }
+
+    .search-bar button, .auth-buttons button {
+        padding: 6px 10px;
+    }
+
+    main {
+        padding: 60px 10px 10px;
+        margin: 70px 10px 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* main content */
+
+
+
+
+.image {
+    position: relative;
+    max-width: 90%; /* Set a maximum width for the image container */
+    margin: 50px auto 50px; /* Center the container with margins on all sides */
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.image h1{
+    text-align:center;
+}
+.image img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto; /* Center the image within the container */
+}
+
+.shopnow {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 10px 30px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.shopnow p {
+    margin: 0;
+}
+
+
+.categories{
+    display: flex;
+    flex-wrap: wrap;
+    margin:2rem;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    box-shadow:#555;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+    max-width: 300px;
+    margin: 1rem;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.card .link{
+    display: -webkit-box; /* Use WebKit box model for multi-line truncation */
+    -webkit-line-clamp: 2; /* Limit text to 2 lines */
+    -webkit-box-orient: vertical; /* Vertical box orientation */
+    overflow: hidden; /* Hide overflowing content */
+    text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+    font-size: 1.2rem; /* Adjust as needed */
+    font-weight: 600; /* Adjust as needed */
+    text-align: center; /* Center align text */
+    display: block; /* Ensure anchor tag is block-level for alignment */
+    margin: 0.5rem 0; /* Adjust margin as needed */
+    color: #000; /* Adjust color as needed */
+}
+.shop-buttons {
+    padding: 1rem;
+    margin-top: 1rem; /* Adjusted to create space above the button */
+    margin-bottom: 1rem;
+    background-color: #555;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    align-items: center;
+    border-radius: 4px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+/* Media Queries */
+
+/* Tablets and smaller screens */
+@media (max-width: 768px) {
+    .image {
+        max-width: 100%; /* Full width for smaller screens */
+        margin: 20px auto; /* Reduced margin */
+    }
+
+    .shopnow {
+        top: 60%;
+        font-size: 20px; /* Smaller font size */
+        padding: 8px 20px; /* Adjust padding */
+    }
+
+    .categories {
+        margin: 1rem;
+        padding: 1rem;
+        flex-direction: column; /* Stack items vertically */
+        align-items: stretch; /* Ensure items stretch to fit */
+        gap: 1.5rem; /* Reduced gap between items */
+    }
+
+    .card {
+        max-width: 90%; /* Adjust max width for smaller screens */
+        margin: 1rem 0; /* Adjust margin for vertical spacing */
+    }
+
+    .card p {
+        font-size: 1rem; /* Smaller font size */
+    }
+
+    .shop-buttons {
+        padding: 0.8rem;
+        margin-top: 0.8rem; /* Adjust spacing */
+        margin-bottom: 0.8rem;
+        font-size: 0.9rem; /* Smaller font size */
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    .image {
+        margin: 10px auto; /* Further reduced margin */
+    }
+
+    .shopnow {
+        top: 50%;
+        font-size: 18px; /* Even smaller font size */
+        padding: 6px 15px; /* Adjust padding */
+    }
+
+    .categories {
+        margin: 0.5rem;
+        padding: 0.5rem;
+        flex-direction: column; /* Stack items vertically */
+        gap: 1rem; /* Reduced gap between items */
+    }
+
+    .card {
+        max-width: 100%; /* Full width for mobile */
+        margin: 0.5rem 0; /* Adjust margin for mobile screens */
+    }
+
+    .card p {
+        font-size: 0.9rem; /* Smaller font size */
+    }
+
+    .shop-buttons {
+        padding: 0.6rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.8rem; /* Smaller font size */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  /* footer */
+  footer {
+    background-color: #333; /* Grey background color for the footer */
+    color: #fff; /* White text color */
+    padding: 30px 0; /* Padding to add space above and below the footer content */
+  }
+
+  .footer-content {
+    width: 80%; /* Adjust width as needed */
+    margin: 0 auto; /* Center the content horizontally */
+    display: flex;
+    justify-content: space-between; /* Space out the items evenly */
+    align-items: flex-start; /* Align items to the top */
+  }
+  
+  .contact-info,
+  .social-media {
+    flex: 1; /* Each section takes up equal space */
+  }
+  
+  .contact-info h3,
+  .social-media h3 {
+    color: #fff; /* White text color */
+  }
+  
+  .contact-info p {
+    margin: 0; /* Remove default margin */
+  }
+  
+  .social-media ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+  }
+  
+  .social-media ul li {
+    margin-bottom: 10px; /* Add spacing between social media links */
+  }
+  
+  .social-media ul li a {
+    color: #fff; /* White text color for links */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  .copyright {
+    text-align: center; /* Center-align copyright text */
+    margin-top: 20px; /* Add space above copyright text */
+  }
+
+.social-media ul li a .fab.fa-facebook-f {
+    color: #1877f2; /* Blue color similar to Facebook's brand color */
+  }
+
+  .social-media ul li a .fab.fa-twitter {
+    color: #1DA1F2; /* Blue color similar to Twitter's brand color */
+  }
+  /* Include Font Awesome CSS file */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+/* Style the LinkedIn icon */
+.social-media ul li a .fab.fa-linkedin {
+  color: #0077B5; /* LinkedIn brand color */
+}

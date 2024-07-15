@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="sofa1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <!-- First Navbar: Logo, Search Bar, Sign Up/Login -->
+        <div class="top-navbar">
+            <div class="logo">
+                <a href="home.html" onclick="loadPage('home')">
+                    <img src="https://res.cloudinary.com/dgccnrp7w/image/upload/v1720818573/logo_ecom_oducaz.png"
+                        alt="Logo" id="logo">
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search...">
+                <button type="button" id="search-button">Search</button>
+            </div>
+            <div class="auth-buttons">
+                <button type="button">Sign Up</button>
+                <button type="button">Log In</button>
+            </div>
+        </div>
+
+        <!-- Second Navbar: Categories -->
+        <div class="bottom-navbar">
+            <nav>
+                <ul>
+                    <li class="left"><a href="#" onclick="togglePopup()"><i class="fa fa-bars" aria-hidden="true"></i>
+                            All</a></li>
+                    <li>
+                        <a href="home.html" onclick="loadPage('home')"><i class="fa fa-home" aria-hidden="true"></i>
+                            Home</a>
+                    </li>
+                    <li class="center"><a href="living-room.html" onclick="loadPage('living-room')">Living Room</a></li>
+                    <li class="center"><a href="bed-room.html" onclick="loadPage('bedroom')">Bedroom</a></li>
+                    <li class="center"><a href="kitchen.html" onclick="loadPage('kitchen')">Kitchen & bathroom</a></li>
+                    <li class="center"><a href="dining-room.html" onclick="loadPage('dining')">Dining Room</a></li>
+                    <li class="center"><a href="home-office.html" onclick="loadPage('office')">Home-Office</a></li>
+                    <li class="center"><a href="decor.html" onclick="loadPage('decor')">Decor</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Popup Menu -->
+    <div id="popup-menu" class="popup-menu">
+        <ul>
+            <li class="dropdown">
+                <a href="living-room.html" class="dropdown-btn"
+                    onclick="toggleDropdown(event, 'living-room')"><b>#Living-Room &#9660;</b></a>
+                <div id="living-room" class="dropdown-content">
+                    <a href="sofa.html" onclick="loadPage('sofas')">Sofas</a>
+                    <a href="tvstands.html" onclick="loadPage('tv-stands')">Tv-stands</a>
+                    <a href="tables.html" onclick="loadPage('tables')">Tables</a>
+                    <a href="lightings.html" onclick="loadPage('lightings')">Lightings</a>
+                    <a href="ottomas.html" onclick="loadPage('ottomans')">Ottomans & poufs</a>
+                    <a href="rugs.html" onclick="loadPage('rugs')">Rugs</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'bedroom')"><b>#Bedroom&#9660;</b></a>
+                <div id="bedroom" class="dropdown-content">
+                    <a href="bedsheets.html" onclick="loadPage('bedsheets')">Bedsheets</a>
+                    <a href="pillows.html" onclick="loadPage('pillows')">Throw Pillows</a>
+                    <a href="beds.html" onclick="loadPage('beds')">Beds</a>
+                    <a href="mattresses.html" onclick="loadPage('mattresses')">Mattresses</a>
+                    <a href="mirrors.html" onclick="loadPage('mirrors')">Mirrors</a>
+                    <a href="vanites.html" onclick="loadPage('vanites')">vanites</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'kitchen')"><b>#Kitchen &
+                        bathroom&#9660;</b></a>
+                <div id="kitchen" class="dropdown-content">
+                    <a href="faucets.html" onclick="loadPage('faucets')">Faucets</a>
+                    <a href="showers.html" onclick="loadPage('showers')">Showers</a>
+                    <a href="bathroom-faucets.html" onclick="loadPage('bathroom-faucets')">Bathroom Faucets</a>
+                    <a href="stainless-steel-sinks.html" onclick="loadPage('stainless-steel-sinks')">Stainless Steel
+                        Sinks</a>
+                    <a href="vanities.html" onclick="loadPage('vanities')">Vanities</a>
+                    <a href="stone-sinks.html" onclick="loadPage('stone-sinks')">Stone Sinks</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'dining')"><b>#Dining
+                        Room&#9660;</b></a>
+                <div id="office" class="dropdown-content">
+                    <a href="dining-tables.html" onclick="loadPage('dining-tables')">Dining Tables</a>
+                    <a href="buffet-tables.html" onclick="loadPage('buffet-tables')">Buffet Tables</a>
+                    <a href="display-cabinets.html" onclick="loadPage('display-cabinets')">Display Cabinets</a>
+                    <a href="kitchen-carts.html" onclick="loadPage('kitchen-carts')">Kitchen Carts</a>
+                    <a href="dining-chairs.html" onclick="loadPage('dining-chairs')">Dining Chairs</a>
+                    <a href="dining-sets.html" onclick="loadPage('dining-sets')">Dining Sets</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn"
+                    onclick="toggleDropdown(event, 'office')"><b>#Home-Office&#9660;</b></a>
+                <div id="outdoor" class="dropdown-content">
+                    <a href="sets.html" onclick="loadPage('sets')">Sets</a>
+                    <a href="file-cabinets.html" onclick="loadPage('file-cabinets')">File Cabinets</a>
+                    <a href="book-cases.html" onclick="loadPage('book-cases')">Book Cases</a>
+                    <a href="computer-chairs.html" onclick="loadPage('computer-chairs')">Computer Chairs</a>
+                    <a href="office-chairs.html" onclick="loadPage('office-chairs')">Office & Leather Chairs</a>
+                    <a href="computer-desks.html" onclick="loadPage('computer-desks')">Computer Desks</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'decor')"><b>#Decor&#9660;</b></a>
+                <div id="outdoor" class="dropdown-content">
+                    <a href="vases.html" onclick="loadPage('vases')">Decorative Vases</a>
+                    <a href="wall-decors.html" onclick="loadPage('wall-decors')">Wall Art Decors</a>
+                    <a href="wall-clocks.html" onclick="loadPage('wall-clocks')">Wall Clocks</a>
+                    <a href="wall-mirrors.html" onclick="loadPage('wall-mirrors')">Wall Mirrors</a>
+                    <a href="statues.html" onclick="loadPage('statues')">Sculptures & Statues</a>
+                    <a href="room.html" onclick="loadPage('room')">Room Dividers</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <main class="content">
+
+        <div class="main-page-content">
+            <div class="left-half">
+                <img src="buffet-table3.jpg">
+            </div>
+            <div class="right-half">
+               <a href="buffet-table3.html" class="heading">A.R.T. Furniture Old World 69'' Cherry Wood Pomegranate Sideboard
+              </a>
+                <p>AT1432432606<br>
+                    by  A.R.T. Furniture  from  Old World</p>
+                <p class="price"><h1>&#8377;21,300</h1></p>
+                <p class="cut-price"><span class="cut-off">&#8377;30,420</span> <span>30% Off</span></p>
+                <span><h1>On Sale</h1></span>
+                <p class="description">
+                   <h3>FREE Shipping</h3>
+                   <p>Ships within 1 to 5 Business Days</p>
+                   <h2>27 In Stock</h2>
+                </p>
+                <div class="favorites">
+                <button class="fav">Add to Cart</button>
+
+                <i class="fa fa-heart"></i>
+
+                </div>
+            </div>
+        </div>
+        <section>
+            <h1>Sideboard Buffet Tables</h1>
+            <p>If you plan on hosting a wedding reception or holiday gathering, a sideboard buffet table is a must-have. A dining room buffet will provide you with enough room to showcase a full array of hors d'oeuvres without cramming a bunch of bowls and platters onto your kitchen table. Of course, your goal is to host the event of the season, so decorative buffet tables will take your gala to the next level and make your event more enjoyable for your guests and less complicated for you. There are several buffets and sideboards that you can choose from to make the most out of your next get-together with family, friends, neighbors, and co-workers.</p>
+        
+            <p>When hosting your next dinner party, make it your best one yet with a stylish buffet server table by your side to assist you with all of your food and beverage needs. Historically, these unique, one-of-a-kind home furniture pieces were made to keep dining tables from being too cluttered and appear overwhelmingly unpleasant. Though the table is the foundation of the dining room, an elegant buffet table will act as a necessary pedestal for appetizers, drinks, accessories, flowers, storage supplies, utensils, and cocktail napkins. This will ensure that any special occasion or event is complete and that guests have a clear, organized surface to rely on.</p>
+        
+            <p>In a dining room, the buffet pieces can be designated for dishes, silverware, and vintage wine bottles. They also allow plenty of room for creativity and personal touches, as these are both important elements of interior design. A dining room buffet server is the epitome of fashionable storage to bring a customized inviting element to the home. LuxeDecor has a collection of buffet server tables appropriate for any dining area setting. From sumptuous sideboards to rustic serving carts, a variety of dining furniture allows servers to accommodate any style and taste. The versatility in these classic furniture pieces is nearly endless.</p>
+        
+            <h2>Before You Buy</h2>
+            <p>There are a few factors that can influence your choice of sideboard buffet tables, and some practical things that you may want to consider before you purchase your new dining sideboards. Here are some things to think about when buying furniture buffets.</p>
+            
+            <ul>
+                <li><strong>Budget:</strong> First and most importantly, consider your budget. Unless you are preparing the spread of food yourself, you already need to invest in a caterer, plus you will need decoration. Buffets tables will need to be factored into the event budget, so you know the amount of funds that are available before investing in decorative buffet tables.</li>
+                <li><strong>Guest List:</strong> Second, consider the size of the guest list. Naturally, more guests mean that you will need more food, which will definitely impact your decision as to the size, features, and style of your new buffets tables.</li>
+                <li><strong>Event Frequency:</strong> If you don’t have an event currently scheduled, but are purchasing sideboard buffet tables in anticipation of future events, calculate the average number of guests that usually show up at your parties.</li>
+                <li><strong>Event Nature:</strong> Finally, consider the nature of your typical event. Are you investing in white buffet tables for a one-time wedding reception? Or, does your family traditionally have small get-togethers every Saturday? Are you renting a space to host the event? Or, is it being held in your own kitchen?</li>
+            </ul>
+            
+            <p>It’s important to ask yourself these questions, so you have an idea about how much use you will get out of your sideboard buffet tables, and get a clearer picture of the best type of buffets table to suit your lifestyle.</p>
+        
+            <h2>Features to Consider</h2>
+            <p>While you can definitely just go out and purchase a couple of basic, long, white buffet tables, dining sideboards are available with features that may come in handy depending on the frequency, size, and types of events that you generally host.</p>
+            
+            <ul>
+                <li><strong>Storage Options:</strong> For instance, you can get a drawer sideboard, cabinets buffets, and sideboards with storage, all of which may come in handy if you want a convenient place to store utensils and condiments.</li>
+                <li><strong>Versatility:</strong> These are also good features to look for if you don’t host events very often. This way, you will still get some use out of your dining sideboards in between get-togethers.</li>
+            </ul>
+        </section>
+        
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: LuxeLivingDecor@gmail.com</p>
+                <p>Phone: +91 1123456789</p>
+            </div>
+
+            <div class="social-media">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/luxeliving._india/"><i class="fa fa-instagram"
+                                aria-hidden="true"></i> Instagram</a></li>
+                    <li><a href="https://twitter.com/luxelivingindia"><i class="fa fa-twitter"></i> Twitter</a></li>
+                    <li><a href="https://www.facebook.com/luxelivingdecor"><i class="fa fa-facebook"></i> Facebook</a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/company/luxe-living-india"><i class="fa fa-linkedin-square"
+                                aria-hidden="true"></i> LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 LuxeLiving Decor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+
+</html>

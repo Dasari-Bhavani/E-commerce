@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="sofa1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <!-- First Navbar: Logo, Search Bar, Sign Up/Login -->
+        <div class="top-navbar">
+            <div class="logo">
+                <a href="home.html" onclick="loadPage('home')">
+                    <img src="https://res.cloudinary.com/dgccnrp7w/image/upload/v1720818573/logo_ecom_oducaz.png"
+                        alt="Logo" id="logo">
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search...">
+                <button type="button" id="search-button">Search</button>
+            </div>
+            <div class="auth-buttons">
+                <button type="button">Sign Up</button>
+                <button type="button">Log In</button>
+            </div>
+        </div>
+
+        <!-- Second Navbar: Categories -->
+        <div class="bottom-navbar">
+            <nav>
+                <ul>
+                    <li class="left"><a href="#" onclick="togglePopup()"><i class="fa fa-bars" aria-hidden="true"></i>
+                            All</a></li>
+                    <li>
+                        <a href="home.html" onclick="loadPage('home')"><i class="fa fa-home" aria-hidden="true"></i>
+                            Home</a>
+                    </li>
+                    <li class="center"><a href="living-room.html" onclick="loadPage('living-room')">Living Room</a></li>
+                    <li class="center"><a href="bed-room.html" onclick="loadPage('bedroom')">Bedroom</a></li>
+                    <li class="center"><a href="kitchen.html" onclick="loadPage('kitchen')">Kitchen & bathroom</a></li>
+                    <li class="center"><a href="dining-room.html" onclick="loadPage('dining')">Dining Room</a></li>
+                    <li class="center"><a href="home-office.html" onclick="loadPage('office')">Home-Office</a></li>
+                    <li class="center"><a href="decor.html" onclick="loadPage('decor')">Decor</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Popup Menu -->
+    <div id="popup-menu" class="popup-menu">
+        <ul>
+            <li class="dropdown">
+                <a href="living-room.html" class="dropdown-btn"
+                    onclick="toggleDropdown(event, 'living-room')"><b>#Living-Room &#9660;</b></a>
+                <div id="living-room" class="dropdown-content">
+                    <a href="sofa.html" onclick="loadPage('sofas')">Sofas</a>
+                    <a href="tvstands.html" onclick="loadPage('tv-stands')">Tv-stands</a>
+                    <a href="tables.html" onclick="loadPage('tables')">Tables</a>
+                    <a href="lightings.html" onclick="loadPage('lightings')">Lightings</a>
+                    <a href="ottomas.html" onclick="loadPage('ottomans')">Ottomans & poufs</a>
+                    <a href="rugs.html" onclick="loadPage('rugs')">Rugs</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'bedroom')"><b>#Bedroom&#9660;</b></a>
+                <div id="bedroom" class="dropdown-content">
+                    <a href="bedsheets.html" onclick="loadPage('bedsheets')">Bedsheets</a>
+                    <a href="pillows.html" onclick="loadPage('pillows')">Throw Pillows</a>
+                    <a href="beds.html" onclick="loadPage('beds')">Beds</a>
+                    <a href="mattresses.html" onclick="loadPage('mattresses')">Mattresses</a>
+                    <a href="mirrors.html" onclick="loadPage('mirrors')">Mirrors</a>
+                    <a href="vanites.html" onclick="loadPage('vanites')">vanites</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'kitchen')"><b>#Kitchen &
+                        bathroom&#9660;</b></a>
+                <div id="kitchen" class="dropdown-content">
+                    <a href="faucets.html" onclick="loadPage('faucets')">Faucets</a>
+                    <a href="showers.html" onclick="loadPage('showers')">Showers</a>
+                    <a href="bathroom-faucets.html" onclick="loadPage('bathroom-faucets')">Bathroom Faucets</a>
+                    <a href="stainless-steel-sinks.html" onclick="loadPage('stainless-steel-sinks')">Stainless Steel
+                        Sinks</a>
+                    <a href="vanities.html" onclick="loadPage('vanities')">Vanities</a>
+                    <a href="stone-sinks.html" onclick="loadPage('stone-sinks')">Stone Sinks</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'dining')"><b>#Dining
+                        Room&#9660;</b></a>
+                <div id="office" class="dropdown-content">
+                    <a href="dining-tables.html" onclick="loadPage('dining-tables')">Dining Tables</a>
+                    <a href="buffet-tables.html" onclick="loadPage('buffet-tables')">Buffet Tables</a>
+                    <a href="display-cabinets.html" onclick="loadPage('display-cabinets')">Display Cabinets</a>
+                    <a href="kitchen-carts.html" onclick="loadPage('kitchen-carts')">Kitchen Carts</a>
+                    <a href="dining-chairs.html" onclick="loadPage('dining-chairs')">Dining Chairs</a>
+                    <a href="dining-sets.html" onclick="loadPage('dining-sets')">Dining Sets</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn"
+                    onclick="toggleDropdown(event, 'office')"><b>#Home-Office&#9660;</b></a>
+                <div id="outdoor" class="dropdown-content">
+                    <a href="sets.html" onclick="loadPage('sets')">Sets</a>
+                    <a href="file-cabinets.html" onclick="loadPage('file-cabinets')">File Cabinets</a>
+                    <a href="book-cases.html" onclick="loadPage('book-cases')">Book Cases</a>
+                    <a href="computer-chairs.html" onclick="loadPage('computer-chairs')">Computer Chairs</a>
+                    <a href="office-chairs.html" onclick="loadPage('office-chairs')">Office & Leather Chairs</a>
+                    <a href="computer-desks.html" onclick="loadPage('computer-desks')">Computer Desks</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'decor')"><b>#Decor&#9660;</b></a>
+                <div id="outdoor" class="dropdown-content">
+                    <a href="vases.html" onclick="loadPage('vases')">Decorative Vases</a>
+                    <a href="wall-decors.html" onclick="loadPage('wall-decors')">Wall Art Decors</a>
+                    <a href="wall-clocks.html" onclick="loadPage('wall-clocks')">Wall Clocks</a>
+                    <a href="wall-mirrors.html" onclick="loadPage('wall-mirrors')">Wall Mirrors</a>
+                    <a href="statues.html" onclick="loadPage('statues')">Sculptures & Statues</a>
+                    <a href="room.html" onclick="loadPage('room')">Room Dividers</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <main class="content">
+
+        <div class="main-page-content">
+            <div class="left-half">
+                <img src="sofa3.jpg">
+            </div>
+            <div class="right-half">
+               <a href="sofa3.html" class="heading">Palliser Regent Reclining 101" Wide Leather Upholstered Sectional Sofa</a>
+                <p>PL41094MO2<br>
+                    by  Palliser  from  Regent</p>
+                <p class="price"><h1>&#8377;78,480</h1></p>
+                <p class="cut-price"><span class="cut-off">&#8377;98,100</span> <span>20% Off</span></p>
+                <span><h1>On Sale</h1></span>
+                <p class="description">
+                   <h3>FREE Shipping</h3>
+                   <p>Ships within 3 to 5 Weeks</p>
+                   <h2>8 In Stock</h2>
+                </p>
+                <div class="favorites">
+                <button class="fav">Add to Cart</button>
+                <!-- <i class="fa-solid fa-heart"></i> -->
+
+                <i class="fa fa-heart"></i>
+
+                </div>
+            </div>
+        </div>
+
+        <section class="chaise-lounges">
+            <h1>Chaise Lounges for Every Home</h1>
+            <p>If you are looking for a relaxing place to sit and enjoy your free time, then there is no better option
+                than a chaise lounge. Sitting in one of these pieces of furniture will give you the feeling that you are
+                floating on air. However, finding the right one can be difficult since there are many different styles
+                available. LuxeDecor has an extensive product line so you can find the perfect lounges for your home.
+            </p>
+
+            <h2>Before You Buy</h2>
+
+            <h3>Pricing</h3>
+            <p>Buying a chaise lounge is a major purchase and is a serious consideration when shopping for your home. A
+                chaise lounge can cost between $350 to as much as $1000 or more, depending on the design and quality of
+                material used. If you are looking for an affordable option, then consider buying one made from rattan
+                rather than metal which will have better durability but may have lower quality.</p>
+            <p>For those who want to spend more on a chaise lounge, then you can find ones that are made from
+                higher-quality materials such as leather chaise lounge and stainless steel which will last longer but
+                may have lower durability.</p>
+
+            <h3>Size</h3>
+            <p>When picking out your chaise lounge couch, you'll need to think about where you're placing it. Will it be
+                in a small guest room? A large master bedroom? You may want to place it in a living room or outdoor
+                space as well. Make sure to take the time to measure the room that you want your couch in so that it
+                fits perfectly and there is enough space to walk around.</p>
+            <p>You'll also want to consider the size of your lounge. Large chaise lounges work best in big open spaces
+                or outdoors. A lounge with armrests will take up more space than a modern chaise lounge that may have a
+                more simple and sleek design.</p>
+
+            <h3>Style</h3>
+            <p>Modern chaise lounges are very popular right now as an indoor lounge chair because of their contemporary
+                yet timeless design. Traditional chaise lounges have a more classic look that might be better suited to
+                an office or library. Modern chaise lounges are perfect for any space, especially for a bedroom.</p>
+            <p>Color is also something that matters when it comes to picking out the perfect chaise lounge for your
+                home. Look for lounges with neutral tones or designs that will match most rooms and styles. You can also
+                go in the other direction and choose a color that will pop and make your chaise lounge a show stopper.
+            </p>
+
+            <h3>Features to Consider</h3>
+
+            <h4>Material Type</h4>
+            <p>When shopping for your perfect lounge, it is important to consider the material type before making a
+                purchase. Fabric styled chaise lounge and upholstery styled come in linen, velvet, leather, faux
+                leather, and microfiber.</p>
+
+            <h4>Durability and Weight of the Fabric</h4>
+            <p>You'll also want to consider the weight of fabric and upholstery. The heavier fabrics will last longer
+                but may not be suitable for outdoor chaise lounges in warm weather or other areas where it would get
+                wet.</p>
+
+            <h4>Enough Space and Seating</h4>
+            <p>It's important that your chaise lounge is big enough for the person sitting on it. If it's for a small
+                child, it will need to be about three feet deep and two feet wide. For an adult, it will need to be at
+                least five feet long and four or more feet deep.</p>
+            <p>You can even get a chaise lounge for more than one person! There are double wide chaise lounges that are
+                perfect for a couple that would like to rest together.</p>
+
+            <h4>Additional Features</h4>
+            <p>Do you want a chaise lounge with armrests? Do you plan on using your chaise in the living room where
+                there may not be space for tables? Pay attention to these considerations when shopping for your perfect
+                chaise lounge.</p>
+
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: LuxeLivingDecor@gmail.com</p>
+                <p>Phone: +91 1123456789</p>
+            </div>
+
+            <div class="social-media">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/luxeliving._india/"><i class="fa fa-instagram"
+                                aria-hidden="true"></i> Instagram</a></li>
+                    <li><a href="https://twitter.com/luxelivingindia"><i class="fa fa-twitter"></i> Twitter</a></li>
+                    <li><a href="https://www.facebook.com/luxelivingdecor"><i class="fa fa-facebook"></i> Facebook</a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/company/luxe-living-india"><i class="fa fa-linkedin-square"
+                                aria-hidden="true"></i> LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 LuxeLiving Decor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="sofa1.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <!-- First Navbar: Logo, Search Bar, Sign Up/Login -->
+        <div class="top-navbar">
+            <div class="logo">
+                <a href="home.html" onclick="loadPage('home')">
+                    <img src="https://res.cloudinary.com/dgccnrp7w/image/upload/v1720818573/logo_ecom_oducaz.png"
+                        alt="Logo" id="logo">
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search...">
+                <button type="button" id="search-button">Search</button>
+            </div>
+            <div class="auth-buttons">
+                <button type="button">Sign Up</button>
+                <button type="button">Log In</button>
+            </div>
+        </div>
+
+        <!-- Second Navbar: Categories -->
+        <div class="bottom-navbar">
+            <nav>
+                <ul>
+                    <li class="left"><a href="#" onclick="togglePopup()"><i class="fa fa-bars" aria-hidden="true"></i>
+                            All</a></li>
+                    <li>
+                        <a href="home.html" onclick="loadPage('home')"><i class="fa fa-home" aria-hidden="true"></i>
+                            Home</a>
+                    </li>
+                    <li class="center"><a href="living-room.html" onclick="loadPage('living-room')">Living Room</a></li>
+                    <li class="center"><a href="bed-room.html" onclick="loadPage('bedroom')">Bedroom</a></li>
+                    <li class="center"><a href="kitchen.html" onclick="loadPage('kitchen')">Kitchen & bathroom</a></li>
+                    <li class="center"><a href="dining-room.html" onclick="loadPage('dining')">Dining Room</a></li>
+                    <li class="center"><a href="home-office.html" onclick="loadPage('office')">Home-Office</a></li>
+                    <li class="center"><a href="decor.html" onclick="loadPage('decor')">Decor</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Popup Menu -->
+    <div id="popup-menu" class="popup-menu">
+        <ul>
+            <li class="dropdown">
+                <a href="living-room.html" class="dropdown-btn"
+                    onclick="toggleDropdown(event, 'living-room')"><b>#Living-Room &#9660;</b></a>
+                <div id="living-room" class="dropdown-content">
+                    <a href="sofa.html" onclick="loadPage('sofas')">Sofas</a>
+                    <a href="tvstands.html" onclick="loadPage('tv-stands')">Tv-stands</a>
+                    <a href="tables.html" onclick="loadPage('tables')">Tables</a>
+                    <a href="lightings.html" onclick="loadPage('lightings')">Lightings</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'bedroom')"><b>#Bedroom&#9660;</b></a>
+                <div id="bedroom" class="dropdown-content">
+                    <a href="bedsheets.html" onclick="loadPage('bedsheets')">Bedsheets</a>
+                    <a href="pillows.html" onclick="loadPage('pillows')">Throw Pillows</a>
+                    <a href="beds.html" onclick="loadPage('beds')">Beds</a>
+                    <a href="mattresses.html" onclick="loadPage('mattresses')">Mattresses</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'kitchen')"><b>#Kitchen &
+                        bathroom&#9660;</b></a>
+                <div id="kitchen" class="dropdown-content">
+                    <a href="faucets.html" onclick="loadPage('faucets')">Faucets</a>
+                    <a href="showers.html" onclick="loadPage('showers')">Showers</a>
+                    <a href="stainless-steel-sinks.html" onclick="loadPage('stainless-steel-sinks')">Stainless Steel
+                        Sinks</a>
+                    <a href="vanities.html" onclick="loadPage('vanities')">Vanities</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'dining')"><b>#Dining
+                        Room&#9660;</b></a>
+                <div id="office" class="dropdown-content">
+                    <a href="dining-tables.html" onclick="loadPage('dining-tables')">Dining Tables</a>
+                    <a href="buffet-tables.html" onclick="loadPage('buffet-tables')">Buffet Tables</a>
+                    <a href="display-cabinets.html" onclick="loadPage('display-cabinets')">Dining Cabinets</a>
+                    <a href="dining-chairs.html" onclick="loadPage('dining-chairs')">Dining Chairs</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn"
+                    onclick="toggleDropdown(event, 'office')"><b>#Home-Office&#9660;</b></a>
+                <div id="outdoor" class="dropdown-content">
+                    <a href="sets.html" onclick="loadPage('sets')">Sets</a>
+                    <a href="file-cabinets.html" onclick="loadPage('file-cabinets')">File Cabinets</a>
+                    <a href="book-cases.html" onclick="loadPage('book-cases')">Book Cases</a>
+                    <a href="office-chairs.html" onclick="loadPage('office-chairs')">Office & Leather Chairs</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'decor')"><b>#Decor&#9660;</b></a>
+                <div id="outdoor" class="dropdown-content">
+                    <a href="vases.html" onclick="loadPage('vases')">Decorative Vases</a>
+                    <a href="wall-clocks.html" onclick="loadPage('wall-clocks')">Wall Clocks</a>
+                    <a href="wall-mirrors.html" onclick="loadPage('wall-mirrors')">Wall Mirrors</a>
+                    <a href="room.html" onclick="loadPage('room')">Room Dividers</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <main class="content">
+
+        <div class="main-page-content">
+            <div class="left-half">
+                <img src="book-case4.jpg">
+            </div>
+            <div class="right-half">
+               <a href="book-case4.html" class="heading">Howard Miller Oxford 46" Center Bookcase</a>
+                <p>HOW920012<br>
+                    by  Howard Miller  from  Oxford</p>
+                <p class="price"><h1>&#8377;18,499<h1></p>
+                <p class="cut-price"><span class="cut-off">&#8377;26,410</span> <span>30% Off</span></p>
+                <span><h1>On Sale</h1></span>
+                <p class="description">
+                   <h3>FREE Shipping</h3>
+                   <p>Ships within 1 to 4 weeks</p>
+                   <h2>9 In Stock</h2>
+                </p>
+                <div class="favorites">
+                <button class="fav">Add to Cart</button>
+
+                <i class="fa fa-heart"></i>
+
+                </div>
+            </div>
+        </div>
+        <section>
+            <h1>Unique Bookcases to Decorate Your Home</h1>
+            <p>There are many different styles of bookcases that you can use to decorate your home. The idea is to find a style that will work with the other furniture in your house and complement it. There are traditionally styled bookcases, modern-styled bookcases, etagere bookcases, or even sleek black leather ones like what you would see in a high-end office space. Whatever type you choose, getting the right-sized one for all of your books and knick-knacks is important.</p>
+        
+            <h2>Before You Buy</h2>
+            <h3>Budget</h3>
+            <p>When you're buying a new bookcase for your home, you'll want to decide how much money you plan on spending. The price of bookshelves will vary greatly depending on the materials used and the size. Think about how long you want your bookcase to last. If you want a long-lasting piece of furniture that will last through generations, then you're going to need to invest in a more expensive bookcase.</p>
+            <p>If you are on a tight budget and want a lightweight option for moving from room to room or if it is just not something that's a high priority for your home design, then less pricey bookcases can be a great option.</p>
+        
+            <h3>Size</h3>
+            <p>When you're buying a new bookcase, it is important to think about the size of your home and what will work best in it. If you are looking for something tall with plenty of space or even an etagere that has multiple shelves, then more room may need to be allocated in your home for it to work.</p>
+            <p>If you are looking for something smaller and more compact, then this is also an option that can be available depending on the size of your space.</p>
+        
+            <h3>Materials</h3>
+            <p>Another important factor to consider when buying a bookcase is what type of material will work best in your current décor or if you're just starting with a new home. If you have a more traditional home and want to keep with the theme, then traditionally styled bookcases or natural wood-covered ones are perfect.</p>
+            <p>If you're looking for something modern that will work best in an office space, sleek black leather is also another option that works well in this type of environment.</p>
+        
+            <h3>Style</h3>
+            <p>There are many different styles of bookcases that you can use to decorate your home. The idea is to find a style that will work with the other furniture in your house and complement it. If you have a minimal contemporary home, you may want something that is sleek and minimalist, like a modern-styled bookcase. If you have an antique home full of beautiful wooden furniture or want something more traditional with lots of detail, then traditionally styled bookcases are perfect for this style.</p>
+            <p>The idea behind finding the right type of bookshelves to decorate your house is not only about having somewhere to display your books, but also choosing the right style, budget, and making sure your purchase suits your needs.</p>
+        
+            <h2>Types of Bookcases</h2>
+            <ul>
+                <li>Ladder bookshelf</li>
+                <li>White bookcase</li>
+                <li>Corner bookcase</li>
+                <li>Small bookshelf</li>
+                <li>Floating bookshelves</li>
+                <li>Narrow bookcase</li>
+                <li>Oak bookcase</li>
+                <li>Tall bookcase</li>
+                <li>Corner ladder shelf bookcase</li>
+                <li>Modern bookshelf</li>
+                <li>Traditional bookshelf</li>
+                <li>Wooden bookshelf</li>
+                <li>Black bookcase</li>
+                <li>Low bookshelf</li>
+                <li>Bookcase with drawers</li>
+            </ul>
+        </section>
+        
+        
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: LuxeLivingDecor@gmail.com</p>
+                <p>Phone: +91 1123456789</p>
+            </div>
+
+            <div class="social-media">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/luxeliving._india/"><i class="fa fa-instagram"
+                                aria-hidden="true"></i> Instagram</a></li>
+                    <li><a href="https://twitter.com/luxelivingindia"><i class="fa fa-twitter"></i> Twitter</a></li>
+                    <li><a href="https://www.facebook.com/luxelivingdecor"><i class="fa fa-facebook"></i> Facebook</a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/company/luxe-living-india"><i class="fa fa-linkedin-square"
+                                aria-hidden="true"></i> LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 LuxeLiving Decor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+
+</html>

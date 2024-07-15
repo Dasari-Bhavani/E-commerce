@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="sofa1.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <!-- First Navbar: Logo, Search Bar, Sign Up/Login -->
+        <div class="top-navbar">
+            <div class="logo">
+                <a href="home.html" onclick="loadPage('home')">
+                    <img src="https://res.cloudinary.com/dgccnrp7w/image/upload/v1720818573/logo_ecom_oducaz.png"
+                        alt="Logo" id="logo">
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search...">
+                <button type="button" id="search-button">Search</button>
+            </div>
+            <div class="auth-buttons">
+                <button type="button">Sign Up</button>
+                <button type="button">Log In</button>
+            </div>
+        </div>
+
+        <!-- Second Navbar: Categories -->
+        <div class="bottom-navbar">
+            <nav>
+                <ul>
+                    <li class="left"><a href="#" onclick="togglePopup()"><i class="fa fa-bars" aria-hidden="true"></i>
+                            All</a></li>
+                    <li>
+                        <a href="home.html" onclick="loadPage('home')"><i class="fa fa-home" aria-hidden="true"></i>
+                            Home</a>
+                    </li>
+                    <li class="center"><a href="living-room.html" onclick="loadPage('living-room')">Living Room</a></li>
+                    <li class="center"><a href="bed-room.html" onclick="loadPage('bedroom')">Bedroom</a></li>
+                    <li class="center"><a href="kitchen.html" onclick="loadPage('kitchen')">Kitchen & bathroom</a></li>
+                    <li class="center"><a href="dining-room.html" onclick="loadPage('dining')">Dining Room</a></li>
+                    <li class="center"><a href="home-office.html" onclick="loadPage('office')">Home-Office</a></li>
+                    <li class="center"><a href="decor.html" onclick="loadPage('decor')">Decor</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Popup Menu -->
+    <div id="popup-menu" class="popup-menu">
+        <ul>
+            <li class="dropdown">
+                <a href="living-room.html" class="dropdown-btn"
+                    onclick="toggleDropdown(event, 'living-room')"><b>#Living-Room &#9660;</b></a>
+                <div id="living-room" class="dropdown-content">
+                    <a href="sofa.html" onclick="loadPage('sofas')">Sofas</a>
+                    <a href="tvstands.html" onclick="loadPage('tv-stands')">Tv-stands</a>
+                    <a href="tables.html" onclick="loadPage('tables')">Tables</a>
+                    <a href="lightings.html" onclick="loadPage('lightings')">Lightings</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'bedroom')"><b>#Bedroom&#9660;</b></a>
+                <div id="bedroom" class="dropdown-content">
+                    <a href="bedsheets.html" onclick="loadPage('bedsheets')">Bedsheets</a>
+                    <a href="pillows.html" onclick="loadPage('pillows')">Throw Pillows</a>
+                    <a href="beds.html" onclick="loadPage('beds')">Beds</a>
+                    <a href="mattresses.html" onclick="loadPage('mattresses')">Mattresses</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'kitchen')"><b>#Kitchen &
+                        bathroom&#9660;</b></a>
+                <div id="kitchen" class="dropdown-content">
+                    <a href="faucets.html" onclick="loadPage('faucets')">Faucets</a>
+                    <a href="showers.html" onclick="loadPage('showers')">Showers</a>
+                    <a href="stainless-steel-sinks.html" onclick="loadPage('stainless-steel-sinks')">Stainless Steel
+                        Sinks</a>
+                    <a href="vanities.html" onclick="loadPage('vanities')">Vanities</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'dining')"><b>#Dining
+                        Room&#9660;</b></a>
+                <div id="office" class="dropdown-content">
+                    <a href="dining-tables.html" onclick="loadPage('dining-tables')">Dining Tables</a>
+                    <a href="buffet-tables.html" onclick="loadPage('buffet-tables')">Buffet Tables</a>
+                    <a href="display-cabinets.html" onclick="loadPage('display-cabinets')">Dining Cabinets</a>
+                    <a href="dining-chairs.html" onclick="loadPage('dining-chairs')">Dining Chairs</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn"
+                    onclick="toggleDropdown(event, 'office')"><b>#Home-Office&#9660;</b></a>
+                <div id="outdoor" class="dropdown-content">
+                    <a href="sets.html" onclick="loadPage('sets')">Sets</a>
+                    <a href="file-cabinets.html" onclick="loadPage('file-cabinets')">File Cabinets</a>
+                    <a href="book-cases.html" onclick="loadPage('book-cases')">Book Cases</a>
+                    <a href="office-chairs.html" onclick="loadPage('office-chairs')">Office & Leather Chairs</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'decor')"><b>#Decor&#9660;</b></a>
+                <div id="outdoor" class="dropdown-content">
+                    <a href="vases.html" onclick="loadPage('vases')">Decorative Vases</a>
+                    <a href="wall-clocks.html" onclick="loadPage('wall-clocks')">Wall Clocks</a>
+                    <a href="wall-mirrors.html" onclick="loadPage('wall-mirrors')">Wall Mirrors</a>
+                    <a href="room.html" onclick="loadPage('room')">Room Dividers</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <main class="content">
+
+        <div class="main-page-content">
+            <div class="left-half">
+                <img src="file-cabinet1.jpg">
+            </div>
+            <div class="right-half">
+               <a href="file-cabinet1.html" class="heading">Hekman Office 36" Louis Phillipe File Cabinet</a>
+                <p>HK79143<br>
+                    by  Hekman  from  Office</p>
+                <p class="price"><h1>&#8377;23,990<h1></p>
+                <p class="cut-price"><span class="cut-off">&#8377;34,270</span> <span>30% Off</span></p>
+                <span><h1>On Sale</h1></span>
+                <p class="description">
+                   <h3>FREE Shipping</h3>
+                   <p>Ships within 1 to 3 weeks</p>
+                   <h2>25 In Stock</h2>
+                </p>
+                <div class="favorites">
+                <button class="fav">Add to Cart</button>
+
+                <i class="fa fa-heart"></i>
+
+                </div>
+            </div>
+        </div>
+        <section>
+            <h1>File Cabinets</h1>
+            <p>File cabinets are a key piece of furniture in any office or home space. They can store your paperwork and ultimately keep you and your filing organized. File cabinets provide a clean, enclosed look for all of your office needs.</p>
+        
+            <h2>Before You Buy</h2>
+            <p>Consider the space you have available for your filing cabinets. It is also important to know how much you plan to file in these cabinets:</p>
+            <ul>
+                <li><strong>Size:</strong> Do you need a tall cabinet with multiple drawers or do you prefer a small filing cabinet?</li>
+                <li><strong>Weight:</strong> Do you have a lot of heavy files to store, or are you needing to organize paperwork you will need to continually access?</li>
+                <li><strong>Style:</strong> Would a sleek metal filing cabinet fit the best? Or would you prefer a wood grain filing cabinet that matches your desk and bookshelf?</li>
+                <li><strong>Budget:</strong> Figure out if you want to buy one filing cabinet or multiple cabinets as a set. It all depends on the amount you plan to store and the space that you have, whether it is in your home or your office.</li>
+            </ul>
+            <p>Once you have measured your space and know your budget, you can delve deeper into the specific features that our filing cabinets have to offer.</p>
+        
+            <h2>File Cabinet Features to Consider</h2>
+            <p>Make sure to ask the important questions about your specific filing cabinet needs before moving forward:</p>
+            <ul>
+                <li><strong>Mobility:</strong> Do you need a stationary filing cabinet, or would you be interested in a rolling filing cabinet? Rolling file cabinets can be useful because they can easily be moved around and rearranged. There are also file cabinets that are attached to bookshelves.</li>
+                <li><strong>Capacity:</strong> Knowing exactly how much paperwork you plan to file will help narrow your search. Will you need a 2 drawer file cabinets, or possibly a 3 drawer file cabinets? Are you planning on filing loose papers or file folders that need extra organization and drawers?</li>
+                <li><strong>Usage:</strong> Do you plan to use this file cabinet every day, or will you be using it for storage? If you plan to access your cabinets every day, you may be interested in a 4 drawer file cabinet or one with multiple drawers, as you can still fit all the files you need to, but can spread them out and avoid jam-packing each drawer.</li>
+                <li><strong>Security:</strong> You may also want to consider purchasing a file cabinet with a lock and key to keep your documents safe and secure.</li>
+            </ul>
+            <p>Your filing cabinets can be functional as well as beautiful. There are many kinds of filing cabinets out there, and once you narrow in on your style preferences, you can find the features that best meet your needs and fits your style.</p>
+        </section>
+        
+        
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: LuxeLivingDecor@gmail.com</p>
+                <p>Phone: +91 1123456789</p>
+            </div>
+
+            <div class="social-media">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/luxeliving._india/"><i class="fa fa-instagram"
+                                aria-hidden="true"></i> Instagram</a></li>
+                    <li><a href="https://twitter.com/luxelivingindia"><i class="fa fa-twitter"></i> Twitter</a></li>
+                    <li><a href="https://www.facebook.com/luxelivingdecor"><i class="fa fa-facebook"></i> Facebook</a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/company/luxe-living-india"><i class="fa fa-linkedin-square"
+                                aria-hidden="true"></i> LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 LuxeLiving Decor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+
+</html>

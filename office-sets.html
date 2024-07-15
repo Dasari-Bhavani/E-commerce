@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="sofa.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <!-- First Navbar: Logo, Search Bar, Sign Up/Login -->
+        <div class="top-navbar">
+            <div class="logo">
+                <a href="home.html" onclick="loadPage('home')">
+                    <img src="https://res.cloudinary.com/dgccnrp7w/image/upload/v1720818573/logo_ecom_oducaz.png"
+                        alt="Logo" id="logo">
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search...">
+                <button type="button" id="search-button">Search</button>
+            </div>
+            <div class="auth-buttons">
+                <button type="button">Sign Up</button>
+                <button type="button">Log In</button>
+            </div>
+        </div>
+
+        <!-- Second Navbar: Categories -->
+        <div class="bottom-navbar">
+            <nav>
+                <ul>
+                    <li class="left"><a href="#" onclick="togglePopup()"><i class="fa fa-bars" aria-hidden="true"></i>
+                            All</a></li>
+                    <li>
+                        <a href="home.html" onclick="loadPage('home')"><i class="fa fa-home" aria-hidden="true"></i>
+                            Home</a>
+                    </li>
+                    <li class="center"><a href="living-room.html" onclick="loadPage('living-room')">Living Room</a></li>
+                    <li class="center"><a href="bed-room.html" onclick="loadPage('bedroom')">Bedroom</a></li>
+                    <li class="center"><a href="kitchen.html" onclick="loadPage('kitchen')">Kitchen & bathroom</a></li>
+                    <li class="center"><a href="dining-room.html" onclick="loadPage('dining')">Dining Room</a></li>
+                    <li class="center"><a href="home-office.html" onclick="loadPage('office')">Home-Office</a></li>
+                    <li class="center"><a href="decor.html" onclick="loadPage('decor')">Decor</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Popup Menu -->
+    <div id="popup-menu" class="popup-menu">
+        <ul>
+            <li class="dropdown">
+                <a href="living-room.html" class="dropdown-btn"
+                    onclick="toggleDropdown(event, 'living-room')"><b>#Living-Room &#9660;</b></a>
+                <div id="living-room" class="dropdown-content">
+                    <a href="sofa.html" onclick="loadPage('sofas')">Sofas</a>
+                    <a href="tvstands.html" onclick="loadPage('tv-stands')">Tv-stands</a>
+                    <a href="tables.html" onclick="loadPage('tables')">Tables</a>
+                    <a href="lightings.html" onclick="loadPage('lightings')">Lightings</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'bedroom')"><b>#Bedroom&#9660;</b></a>
+                <div id="bedroom" class="dropdown-content">
+                    <a href="bedsheets.html" onclick="loadPage('bedsheets')">Bedsheets</a>
+                    <a href="pillows.html" onclick="loadPage('pillows')">Throw Pillows</a>
+                    <a href="beds.html" onclick="loadPage('beds')">Beds</a>
+                    <a href="mattresses.html" onclick="loadPage('mattresses')">Mattresses</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'kitchen')"><b>#Kitchen &
+                        bathroom&#9660;</b></a>
+                <div id="kitchen" class="dropdown-content">
+                    <a href="faucets.html" onclick="loadPage('faucets')">Faucets</a>
+                    <a href="showers.html" onclick="loadPage('showers')">Showers</a>
+                    <a href="stainless-steel-sinks.html" onclick="loadPage('stainless-steel-sinks')">Stainless Steel
+                        Sinks</a>
+                    <a href="vanities.html" onclick="loadPage('vanities')">Vanities</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'dining')"><b>#Dining
+                        Room&#9660;</b></a>
+                <div id="office" class="dropdown-content">
+                    <a href="dining-tables.html" onclick="loadPage('dining-tables')">Dining Tables</a>
+                    <a href="buffet-tables.html" onclick="loadPage('buffet-tables')">Buffet Tables</a>
+                    <a href="display-cabinets.html" onclick="loadPage('display-cabinets')">Dining Cabinets</a>
+                    <a href="dining-chairs.html" onclick="loadPage('dining-chairs')">Dining Chairs</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn"
+                    onclick="toggleDropdown(event, 'office')"><b>#Home-Office&#9660;</b></a>
+                <div id="outdoor" class="dropdown-content">
+                    <a href="sets.html" onclick="loadPage('sets')">Sets</a>
+                    <a href="file-cabinets.html" onclick="loadPage('file-cabinets')">File Cabinets</a>
+                    <a href="book-cases.html" onclick="loadPage('book-cases')">Book Cases</a>
+                    <a href="office-chairs.html" onclick="loadPage('office-chairs')">Office & Leather Chairs</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'decor')"><b>#Decor&#9660;</b></a>
+                <div id="outdoor" class="dropdown-content">
+                    <a href="vases.html" onclick="loadPage('vases')">Decorative Vases</a>
+                    <a href="wall-clocks.html" onclick="loadPage('wall-clocks')">Wall Clocks</a>
+                    <a href="wall-mirrors.html" onclick="loadPage('wall-mirrors')">Wall Mirrors</a>
+                    <a href="room.html" onclick="loadPage('room')">Room Dividers</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <main class="content">
+
+        <div class="image">
+            <h1>Office Sets</h1>
+        </div>
+
+        <div class="categories">
+            <div class="card">
+                <img src="office-set1.jpg" href="office-set1.html">
+                <a class="link" href="office-set1.html">Legacy Classic Bunkhouse Home Office Set</a>
+                <a class="shop-buttons" href="office-set1.html">Shop Now</a>
+            </div>
+            <div class="card">
+                <img src="office-set2.jpg" href="office-set2.html">
+                <a class="link" href="office-set2.html">Bernhardt Coleman Home Office Set</a>
+                <a class="shop-buttons" href="office-set2.html">Shop Now</a>
+            </div>
+            <div class="card">
+                <img src="office-set3.jpg" href="office-set3.html">
+                <a class="link" href="office-set3.html">Sunpan Home Office Set</a>
+                <a class="shop-buttons" href="office-set3.html">Shop Now</a>
+            </div>
+            <div class="card">
+                <img src="office-set4.jpg" href="office-set4.html">
+                <a class="link" href="office-set4.html">Sunpan Home Office Set</a>
+                <a class="shop-buttons" href="office-set4.html">Shop Now</a>
+            </div>
+        </div>
+        
+        <section>
+            <h1>Home Office Sets</h1>
+        
+            <p>Office furniture sets can complete your office and give it a cohesive and professional look. Having a matching set of furniture can make you feel put together, and above all, provide a functional and organized space to get your work done.</p>
+        
+            <h2>Before You Buy</h2>
+            <p>Before you purchase an office set, there are a few things to consider:</p>
+            <ul>
+                <li><strong>Office Furniture Needs:</strong> What kind of office furniture will you need? Do you need a computer desk and chair set?</li>
+                <li><strong>Office Size:</strong> Consider the size of your office and the space you'd like to place furniture in. If you have a large space, you may be interested in an executive desk set, which typically includes a bigger desk, and sometimes even a hutch or bookshelf. If your office is a little less spacious, you may be interested in a corner desk setup or a small desk and chair set to maximize your work space.</li>
+                <li><strong>Budget:</strong> Keep your budget in mind. Buying a complete office set is a good way to furnish your office all at once, but it can be costly. It is important to keep the price in mind while shopping and be realistic. There is a lot of variety with the office sets offered, and many are customizable to fit your specific needs and budget.</li>
+                <li><strong>Usage:</strong> Think about where you will be spending the most time and what office furniture you have used and enjoyed in the past. Will you be at your desk for multiple hours? Then it may be important to research the perfect desk and chair set to save your back and keep you healthy and ready to work. You may be interested in looking into an ergonomic desk setup as well. From standing and walking desks to completely flexible seating areas, there are office sets available for any kind of work station you can imagine.</li>
+            </ul>
+        
+            <h2>Features to Consider</h2>
+            <p>There are many kinds of office sets available. Once you have decided what pieces of office furniture sets you need, you can begin to sift through the many features each individual set has to offer.</p>
+            <ul>
+                <li><strong>Essential Pieces:</strong> Start with the most pertinent pieces first, like a desk and chair, and then look into sets with other features you might need. Will you be needing filing cabinets or multiple drawers in your desk? Are you more of a computer user, or will you require a separate printer and paper station? Do you need a desk organizer set as well as furniture?</li>
+                <li><strong>Personal Taste:</strong> As with all furniture, it is important to consider your own personal tastes, and make sure your furniture matches your style and is useful. Being comfortable at your work station is also important.</li>
+            </ul>
+        </section>
+        
+        
+        
+        
+
+
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: LuxeLivingDecor@gmail.com</p>
+                <p>Phone: +91 1123456789</p>
+            </div>
+
+            <div class="social-media">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/luxeliving._india/"><i class="fa fa-instagram"
+                                aria-hidden="true"></i> Instagram</a></li>
+                    <li><a href="https://twitter.com/luxelivingindia"><i class="fa fa-twitter"></i> Twitter</a></li>
+                    <li><a href="https://www.facebook.com/luxelivingdecor"><i class="fa fa-facebook"></i> Facebook</a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/company/luxe-living-india"><i class="fa fa-linkedin-square"
+                                aria-hidden="true"></i> LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 LuxeLiving Decor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+
+</html>

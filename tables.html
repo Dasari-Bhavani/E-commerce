@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="sofa.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <!-- First Navbar: Logo, Search Bar, Sign Up/Login -->
+        <div class="top-navbar">
+            <div class="logo">
+                <a href="home.html" onclick="loadPage('home')">
+                    <img src="https://res.cloudinary.com/dgccnrp7w/image/upload/v1720818573/logo_ecom_oducaz.png"
+                        alt="Logo" id="logo">
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search...">
+                <button type="button" id="search-button">Search</button>
+            </div>
+            <div class="auth-buttons">
+                <button type="button">Sign Up</button>
+                <button type="button">Log In</button>
+            </div>
+        </div>
+
+        <!-- Second Navbar: Categories -->
+        <div class="bottom-navbar">
+            <nav>
+                <ul>
+                    <li class="left"><a href="#" onclick="togglePopup()"><i class="fa fa-bars" aria-hidden="true"></i>
+                            All</a></li>
+                    <li>
+                        <a href="home.html" onclick="loadPage('home')"><i class="fa fa-home" aria-hidden="true"></i>
+                            Home</a>
+                    </li>
+                    <li class="center"><a href="living-room.html" onclick="loadPage('living-room')">Living Room</a></li>
+                    <li class="center"><a href="bed-room.html" onclick="loadPage('bedroom')">Bedroom</a></li>
+                    <li class="center"><a href="kitchen.html" onclick="loadPage('kitchen')">Kitchen & bathroom</a></li>
+                    <li class="center"><a href="dining-room.html" onclick="loadPage('dining')">Dining Room</a></li>
+                    <li class="center"><a href="home-office.html" onclick="loadPage('office')">Home-Office</a></li>
+                    <li class="center"><a href="decor.html" onclick="loadPage('decor')">Decor</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Popup Menu -->
+    <div id="popup-menu" class="popup-menu">
+        <ul>
+            <li class="dropdown">
+                <a href="living-room.html" class="dropdown-btn"
+                    onclick="toggleDropdown(event, 'living-room')"><b>#Living-Room &#9660;</b></a>
+                <div id="living-room" class="dropdown-content">
+                    <a href="sofa.html" onclick="loadPage('sofas')">Sofas</a>
+                    <a href="tvstands.html" onclick="loadPage('tv-stands')">Tv-stands</a>
+                    <a href="tables.html" onclick="loadPage('tables')">Tables</a>
+                    <a href="lightings.html" onclick="loadPage('lightings')">Lightings</a>
+                    <a href="ottomas.html" onclick="loadPage('ottomans')">Ottomans & poufs</a>
+                    <a href="rugs.html" onclick="loadPage('rugs')">Rugs</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'bedroom')"><b>#Bedroom&#9660;</b></a>
+                <div id="bedroom" class="dropdown-content">
+                    <a href="bedsheets.html" onclick="loadPage('bedsheets')">Bedsheets</a>
+                    <a href="pillows.html" onclick="loadPage('pillows')">Throw Pillows</a>
+                    <a href="beds.html" onclick="loadPage('beds')">Beds</a>
+                    <a href="mattresses.html" onclick="loadPage('mattresses')">Mattresses</a>
+                    <a href="mirrors.html" onclick="loadPage('mirrors')">Mirrors</a>
+                    <a href="vanites.html" onclick="loadPage('vanites')">vanites</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'kitchen')"><b>#Kitchen &
+                        bathroom&#9660;</b></a>
+                <div id="kitchen" class="dropdown-content">
+                    <a href="faucets.html" onclick="loadPage('faucets')">Faucets</a>
+                    <a href="showers.html" onclick="loadPage('showers')">Showers</a>
+                    <a href="bathroom-faucets.html" onclick="loadPage('bathroom-faucets')">Bathroom Faucets</a>
+                    <a href="stainless-steel-sinks.html" onclick="loadPage('stainless-steel-sinks')">Stainless Steel
+                        Sinks</a>
+                    <a href="vanities.html" onclick="loadPage('vanities')">Vanities</a>
+                    <a href="stone-sinks.html" onclick="loadPage('stone-sinks')">Stone Sinks</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'dining')"><b>#Dining
+                        Room&#9660;</b></a>
+                <div id="office" class="dropdown-content">
+                    <a href="dining-tables.html" onclick="loadPage('dining-tables')">Dining Tables</a>
+                    <a href="buffet-tables.html" onclick="loadPage('buffet-tables')">Buffet Tables</a>
+                    <a href="display-cabinets.html" onclick="loadPage('display-cabinets')">Display Cabinets</a>
+                    <a href="kitchen-carts.html" onclick="loadPage('kitchen-carts')">Kitchen Carts</a>
+                    <a href="dining-chairs.html" onclick="loadPage('dining-chairs')">Dining Chairs</a>
+                    <a href="dining-sets.html" onclick="loadPage('dining-sets')">Dining Sets</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn"
+                    onclick="toggleDropdown(event, 'office')"><b>#Home-Office&#9660;</b></a>
+                <div id="outdoor" class="dropdown-content">
+                    <a href="sets.html" onclick="loadPage('sets')">Sets</a>
+                    <a href="file-cabinets.html" onclick="loadPage('file-cabinets')">File Cabinets</a>
+                    <a href="book-cases.html" onclick="loadPage('book-cases')">Book Cases</a>
+                    <a href="computer-chairs.html" onclick="loadPage('computer-chairs')">Computer Chairs</a>
+                    <a href="office-chairs.html" onclick="loadPage('office-chairs')">Office & Leather Chairs</a>
+                    <a href="computer-desks.html" onclick="loadPage('computer-desks')">Computer Desks</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'decor')"><b>#Decor&#9660;</b></a>
+                <div id="outdoor" class="dropdown-content">
+                    <a href="vases.html" onclick="loadPage('vases')">Decorative Vases</a>
+                    <a href="wall-decors.html" onclick="loadPage('wall-decors')">Wall Art Decors</a>
+                    <a href="wall-clocks.html" onclick="loadPage('wall-clocks')">Wall Clocks</a>
+                    <a href="wall-mirrors.html" onclick="loadPage('wall-mirrors')">Wall Mirrors</a>
+                    <a href="statues.html" onclick="loadPage('statues')">Sculptures & Statues</a>
+                    <a href="room.html" onclick="loadPage('room')">Room Dividers</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <main class="content">
+
+        <div class="image">
+            <h1>Living Room Tables</h1>
+            <!-- <img src="tv-shop.jpg"> -->
+            <!-- <div class="shopnow">
+                <p>SHOP NOW</p>
+            </div> -->
+        </div>
+
+        <div class="categories">
+            <div class="card">
+                <img src="table1.jpg" href="table1.html">
+                <a class="link" href="table1.html">A.R.T. Furniture Morrissey Hillier 75" Rectangular Stone Bezel Console Table</a>
+                <a class="shop-buttons" href="table1.html">Shop Now</a>
+            </div>
+            <div class="card">
+                <img src="table2.jpg" href="table2.html">
+                <a class="link" href="table2.html">Michael Amini Platine De Royale 60" Oval Glass Champagne Antique Platinum Cocktail Table</a>
+                <a class="shop-buttons" href="table2.html">Shop Now</a>
+            </div>
+            <div class="card">
+                <img src="table3.jpg" href="table3.html">
+                <a class="link" href="table3.html">Uttermost Graciano 28" Round Glass Antique Gold End Table</a>
+                <a class="shop-buttons" href="table3.html">Shop Now</a>
+            </div>
+            <div class="card">
+                <img src="table4.jpg" href="table4.html">
+                <a class="link" href="table4.html">Lexington Oyster Bay 24" Square Metal End Table</a>
+                <a class="shop-buttons" href="table4.html">Shop Now</a>
+            </div>
+        </div>
+        <section>
+            <h1>Tables</h1>
+            <p>Tables serve a variety of functions and purposes in a home. They can act as accent furniture, and be placed in positions where they can be noticed and appreciated. You can put vases, pictures, and other items on them that will make your home feel warm and cozy to live in.</p>
+        
+            <h2>Before You Buy</h2>
+            <p>You must first ensure that the console table you purchase is right for the space in which it is to sit. The console table you put in your home will reflect your sense of style and taste. You should verify that the size and shape are well suited to the space. And you should also make sure that the color, materials, patterns, and design suit your aesthetic palate. All this must be done before you buy.</p>
+        
+            <h2>Features to Consider</h2>
+            <p>Console tables come in many different forms, and you will have a range of styles and features to choose from. Here are some you should consider:</p>
+        
+            <h3>Traditional</h3>
+            <p>Traditional console tables are usually made of wood. The latter tends to have a dark finish with rich ornamentation and elaborate decorations. If you are into console tables with moldings, turned spindles, cabriole legs, intricate brass drawer pulls, and other highly refined features, then you should go with a traditional table.</p>
+        
+            <h3>Transitional</h3>
+            <p>These tables contain a mixture of traditional and contemporary decorative elements. They are, however, softer in appearance with decoration that is more pared down. Transitional console tables typically include classical lines and rounded corners. They are known for being both beautiful and highly functional.</p>
+        
+            <h3>Contemporary</h3>
+            <p>Contemporary console tables are more linear in line and overall form. They also have softer and simpler ornamentation. Their designs are uncluttered, and they tend to have light wood finishes. Art Deco, urban, and retro are a few of the sub-styles in this category.</p>
+        
+            <h3>Modern</h3>
+            <p>There is no ornamentation in modern console tables. They tend to have geometric or asymmetrical designs that reflect the latest ideas and materials. Such tables are lean and spare, sleek and polished. They are offered in a variety of materials, including glass, metal, and stone.</p>
+        
+            <h3>Country</h3>
+            <p>As the name suggests, the features of this console table grew out of rustic living. Many such tables mimic the styles that were popular in Colonial America. These tables have lighter finishes and contain little or no ornamentation. They are usually constructed of wood and have scalloped edges, wainscoting, and turned legs.</p>
+        
+            <h3>Eclectic</h3>
+            <p>These tables have become more and more popular over the years. They consist of a blend of different styles and aesthetic ideas. Eclectic tables reflect more the approach and philosophy of the individual designer than any larger design movement.</p>
+        
+            <h2>Materials</h2>
+            <p>You should also pay close attention to the materials that the console table is made of. Here are some of the most common options:</p>
+        
+            <h3>Wood</h3>
+            <p>Console tables made of real wood are enormously popular. These tables are crafted from the timber cut from the trunks of trees. Beech, oak, and maple are among the most commonly used.</p>
+        
+            <h3>Metal</h3>
+            <p>Metal console tables can be made from iron, steel, aluminium, and other alloys. In such a table, only the frame will be metal. The top will be made of glass or some other material. Metal console tables are stylish, durable, and easy to maintain.</p>
+        
+            <h3>Stone</h3>
+            <p>This is another popular material for a console table. It can be made of marble, granite, or slate. Some people opt for fake stone tables. These are engineered from plywood or MDF and only have the appearance of stone. They weigh less and are not as costly.</p>
+        </section>
+        
+        
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: LuxeLivingDecor@gmail.com</p>
+                <p>Phone: +91 1123456789</p>
+            </div>
+
+            <div class="social-media">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/luxeliving._india/"><i class="fa fa-instagram"
+                                aria-hidden="true"></i> Instagram</a></li>
+                    <li><a href="https://twitter.com/luxelivingindia"><i class="fa fa-twitter"></i> Twitter</a></li>
+                    <li><a href="https://www.facebook.com/luxelivingdecor"><i class="fa fa-facebook"></i> Facebook</a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/company/luxe-living-india"><i class="fa fa-linkedin-square"
+                                aria-hidden="true"></i> LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 LuxeLiving Decor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="sofa.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <!-- First Navbar: Logo, Search Bar, Sign Up/Login -->
+        <div class="top-navbar">
+            <div class="logo">
+                <a href="home.html" onclick="loadPage('home')">
+                    <img src="https://res.cloudinary.com/dgccnrp7w/image/upload/v1720818573/logo_ecom_oducaz.png"
+                        alt="Logo" id="logo">
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search...">
+                <button type="button" id="search-button">Search</button>
+            </div>
+            <div class="auth-buttons">
+                <button type="button">Sign Up</button>
+                <button type="button">Log In</button>
+            </div>
+        </div>
+
+        <!-- Second Navbar: Categories -->
+        <div class="bottom-navbar">
+            <nav>
+                <ul>
+                    <li class="left"><a href="#" onclick="togglePopup()"><i class="fa fa-bars" aria-hidden="true"></i>
+                            All</a></li>
+                    <li>
+                        <a href="home.html" onclick="loadPage('home')"><i class="fa fa-home" aria-hidden="true"></i>
+                            Home</a>
+                    </li>
+                    <li class="center"><a href="living-room.html" onclick="loadPage('living-room')">Living Room</a></li>
+                    <li class="center"><a href="bed-room.html" onclick="loadPage('bedroom')">Bedroom</a></li>
+                    <li class="center"><a href="kitchen.html" onclick="loadPage('kitchen')">Kitchen & bathroom</a></li>
+                    <li class="center"><a href="dining-room.html" onclick="loadPage('dining')">Dining Room</a></li>
+                    <li class="center"><a href="home-office.html" onclick="loadPage('office')">Home-Office</a></li>
+                    <li class="center"><a href="decor.html" onclick="loadPage('decor')">Decor</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Popup Menu -->
+    <div id="popup-menu" class="popup-menu">
+        <ul>
+            <li class="dropdown">
+                <a href="living-room.html" class="dropdown-btn"
+                    onclick="toggleDropdown(event, 'living-room')"><b>#Living-Room &#9660;</b></a>
+                <div id="living-room" class="dropdown-content">
+                    <a href="sofa.html" onclick="loadPage('sofas')">Sofas</a>
+                    <a href="tvstands.html" onclick="loadPage('tv-stands')">Tv-stands</a>
+                    <a href="tables.html" onclick="loadPage('tables')">Tables</a>
+                    <a href="lightings.html" onclick="loadPage('lightings')">Lightings</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'bedroom')"><b>#Bedroom&#9660;</b></a>
+                <div id="bedroom" class="dropdown-content">
+                    <a href="bedsheets.html" onclick="loadPage('bedsheets')">Bedsheets</a>
+                    <a href="pillows.html" onclick="loadPage('pillows')">Throw Pillows</a>
+                    <a href="beds.html" onclick="loadPage('beds')">Beds</a>
+                    <a href="mattresses.html" onclick="loadPage('mattresses')">Mattresses</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'kitchen')"><b>#Kitchen &
+                        bathroom&#9660;</b></a>
+                <div id="kitchen" class="dropdown-content">
+                    <a href="faucets.html" onclick="loadPage('faucets')">Faucets</a>
+                    <a href="showers.html" onclick="loadPage('showers')">Showers</a>
+                    <a href="stainless-steel-sinks.html" onclick="loadPage('stainless-steel-sinks')">Stainless Steel
+                        Sinks</a>
+                    <a href="vanities.html" onclick="loadPage('vanities')">Vanities</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'dining')"><b>#Dining
+                        Room&#9660;</b></a>
+                <div id="office" class="dropdown-content">
+                    <a href="dining-tables.html" onclick="loadPage('dining-tables')">Dining Tables</a>
+                    <a href="buffet-tables.html" onclick="loadPage('buffet-tables')">Buffet Tables</a>
+                    <a href="display-cabinets.html" onclick="loadPage('display-cabinets')">Dining Cabinets</a>
+                    <a href="dining-chairs.html" onclick="loadPage('dining-chairs')">Dining Chairs</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn"
+                    onclick="toggleDropdown(event, 'office')"><b>#Home-Office&#9660;</b></a>
+                <div id="outdoor" class="dropdown-content">
+                    <a href="sets.html" onclick="loadPage('sets')">Sets</a>
+                    <a href="file-cabinets.html" onclick="loadPage('file-cabinets')">File Cabinets</a>
+                    <a href="book-cases.html" onclick="loadPage('book-cases')">Book Cases</a>
+                    <a href="office-chairs.html" onclick="loadPage('office-chairs')">Office & Leather Chairs</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'decor')"><b>#Decor&#9660;</b></a>
+                <div id="outdoor" class="dropdown-content">
+                    <a href="vases.html" onclick="loadPage('vases')">Decorative Vases</a>
+                    <a href="wall-clocks.html" onclick="loadPage('wall-clocks')">Wall Clocks</a>
+                    <a href="wall-mirrors.html" onclick="loadPage('wall-mirrors')">Wall Mirrors</a>
+                    <a href="room.html" onclick="loadPage('room')">Room Dividers</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <main class="content">
+
+        <div class="image">
+            <h1>Room Dividers</h1>
+        </div>
+
+        <div class="categories">
+            <div class="card">
+                <img src="room1.jpg" href="room1.html">
+                <a class="link" href="room1.html">Moe's Home Multi 3 Panel Room Divider</a>
+                <a class="shop-buttons" href="room1.html">Shop Now</a>
+            </div>
+            <div class="card">
+                <img src="room2.jpg" href="room2.html">
+                <a class="link" href="room2.html">Meyda Quatrefoil Classical Room Divider</a>
+                <a class="shop-buttons" href="room2.html">Shop Now</a>
+            </div>
+            <div class="card">
+                <img src="room3.jpg" href="room3.html">
+                <a class="link" href="room3.html">Elk Home Black 4-Panel Room Divider</a>
+                <a class="shop-buttons" href="room3.html">Shop Now</a>
+            </div>
+            <div class="card">
+                <img src="room4.jpg" href="room4.html">
+                <a class="link" href="room4.html">Currey & Company Sisal Natural / Weathered Oak 3-Panel Room Divider</a>
+                <a class="shop-buttons" href="room4.html">Shop Now</a>
+            </div>
+        </div>
+        
+        <section>
+            <h1>Room Dividers</h1>
+            <p>Wall room dividers have long played a role in interior design. In the distant past, these items were essential privacy screens, while the queens and kings of England sought them out as a statement of style or even status.</p>
+            <p>Today, room dividers have become decorative elements that span both form and function. Young people living in small apartments — especially studios — often use them to create definition in their space, while others place a room divider screen in their living room or bedroom as a showpiece that helps to define their overall interior design style.</p>
+            <p>The options for room partitions are endless. If you are on the hunt for one for your home — or if you’re tired of relying on dividing rooms with curtains, here is everything you need to know about room dividers, so you can select the best one for your needs.</p>
+        
+            <h2>Before You Buy</h2>
+            <p>If you are looking for a room divider for your home — whether it’s a traditional two-story modern loft or another type of home — there are some essential questions you will need to have answered.</p>
+        
+            <h3>Size</h3>
+            <p>The great thing about room dividers is they work for any space. However, there are still options you must consider. If you have a home with especially low or tall ceilings, think about the height of the room divider that will work best.</p>
+        
+            <h3>Installation</h3>
+            <p>For the most part, you will likely use a fold room divider that can be set up standing on the floor. However, there are other options you may want to consider, including sliding dividers for your rooms or a hang room divider. Whether or not these options are right for you will come down to where and how you plan to use them.</p>
+        
+            <h3>Design</h3>
+            <p>Room dividers come in all materials and styles. You should think about what works best and where you will place it. Do you want a wood folding screen room divider to go with the rustic design of a space, or are you looking for a screen for the bedroom that will add color, pattern, or texture to the space where you will spend a lot of your time?</p>
+            <p>You can find room dividers made out of everything from rice paper to wood to faux leather. It all comes down to what is right for your home.</p>
+        
+            <h3>Cost</h3>
+            <p>Like with all home furniture and accessories, there is a wide range of what you can spend. You will probably spend at least $50 on a free-standing one. Keep in mind, however, that the price of these pieces will increase based on the construction and size, with larger-paneled options costing more than smaller-paneled models. At the end of the day, however, you can find a room divider that fits your budget.</p>
+        </section>
+        
+        
+        
+        
+        
+        
+        
+
+
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: LuxeLivingDecor@gmail.com</p>
+                <p>Phone: +91 1123456789</p>
+            </div>
+
+            <div class="social-media">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/luxeliving._india/"><i class="fa fa-instagram"
+                                aria-hidden="true"></i> Instagram</a></li>
+                    <li><a href="https://twitter.com/luxelivingindia"><i class="fa fa-twitter"></i> Twitter</a></li>
+                    <li><a href="https://www.facebook.com/luxelivingdecor"><i class="fa fa-facebook"></i> Facebook</a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/company/luxe-living-india"><i class="fa fa-linkedin-square"
+                                aria-hidden="true"></i> LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 LuxeLiving Decor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+
+</html>

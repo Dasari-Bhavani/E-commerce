@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="sofa.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <!-- First Navbar: Logo, Search Bar, Sign Up/Login -->
+        <div class="top-navbar">
+            <div class="logo">
+                <a href="home.html" onclick="loadPage('home')">
+                    <img src="https://res.cloudinary.com/dgccnrp7w/image/upload/v1720818573/logo_ecom_oducaz.png"
+                        alt="Logo" id="logo">
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search...">
+                <button type="button" id="search-button">Search</button>
+            </div>
+            <div class="auth-buttons">
+                <button type="button">Sign Up</button>
+                <button type="button">Log In</button>
+            </div>
+        </div>
+
+        <!-- Second Navbar: Categories -->
+        <div class="bottom-navbar">
+            <nav>
+                <ul>
+                    <li class="left"><a href="#" onclick="togglePopup()"><i class="fa fa-bars" aria-hidden="true"></i>
+                            All</a></li>
+                    <li>
+                        <a href="home.html" onclick="loadPage('home')"><i class="fa fa-home" aria-hidden="true"></i>
+                            Home</a>
+                    </li>
+                    <li class="center"><a href="living-room.html" onclick="loadPage('living-room')">Living Room</a></li>
+                    <li class="center"><a href="bed-room.html" onclick="loadPage('bedroom')">Bedroom</a></li>
+                    <li class="center"><a href="kitchen.html" onclick="loadPage('kitchen')">Kitchen & bathroom</a></li>
+                    <li class="center"><a href="dining-room.html" onclick="loadPage('dining')">Dining Room</a></li>
+                    <li class="center"><a href="home-office.html" onclick="loadPage('office')">Home-Office</a></li>
+                    <li class="center"><a href="decor.html" onclick="loadPage('decor')">Decor</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Popup Menu -->
+    <div id="popup-menu" class="popup-menu">
+        <ul>
+            <li class="dropdown">
+                <a href="living-room.html" class="dropdown-btn"
+                    onclick="toggleDropdown(event, 'living-room')"><b>#Living-Room &#9660;</b></a>
+                <div id="living-room" class="dropdown-content">
+                    <a href="sofa.html" onclick="loadPage('sofas')">Sofas</a>
+                    <a href="tvstands.html" onclick="loadPage('tv-stands')">Tv-stands</a>
+                    <a href="tables.html" onclick="loadPage('tables')">Tables</a>
+                    <a href="lightings.html" onclick="loadPage('lightings')">Lightings</a>
+                    <a href="ottomas.html" onclick="loadPage('ottomans')">Ottomans & poufs</a>
+                    <a href="rugs.html" onclick="loadPage('rugs')">Rugs</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'bedroom')"><b>#Bedroom&#9660;</b></a>
+                <div id="bedroom" class="dropdown-content">
+                    <a href="bedsheets.html" onclick="loadPage('bedsheets')">Bedsheets</a>
+                    <a href="pillows.html" onclick="loadPage('pillows')">Throw Pillows</a>
+                    <a href="beds.html" onclick="loadPage('beds')">Beds</a>
+                    <a href="mattresses.html" onclick="loadPage('mattresses')">Mattresses</a>
+                    <a href="mirrors.html" onclick="loadPage('mirrors')">Mirrors</a>
+                    <a href="vanites.html" onclick="loadPage('vanites')">vanites</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'kitchen')"><b>#Kitchen &
+                        bathroom&#9660;</b></a>
+                <div id="kitchen" class="dropdown-content">
+                    <a href="faucets.html" onclick="loadPage('faucets')">Faucets</a>
+                    <a href="showers.html" onclick="loadPage('showers')">Showers</a>
+                    <a href="bathroom-faucets.html" onclick="loadPage('bathroom-faucets')">Bathroom Faucets</a>
+                    <a href="stainless-steel-sinks.html" onclick="loadPage('stainless-steel-sinks')">Stainless Steel
+                        Sinks</a>
+                    <a href="vanities.html" onclick="loadPage('vanities')">Vanities</a>
+                    <a href="stone-sinks.html" onclick="loadPage('stone-sinks')">Stone Sinks</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'dining')"><b>#Dining
+                        Room&#9660;</b></a>
+                <div id="office" class="dropdown-content">
+                    <a href="dining-tables.html" onclick="loadPage('dining-tables')">Dining Tables</a>
+                    <a href="buffet-tables.html" onclick="loadPage('buffet-tables')">Buffet Tables</a>
+                    <a href="display-cabinets.html" onclick="loadPage('display-cabinets')">Display Cabinets</a>
+                    <a href="kitchen-carts.html" onclick="loadPage('kitchen-carts')">Kitchen Carts</a>
+                    <a href="dining-chairs.html" onclick="loadPage('dining-chairs')">Dining Chairs</a>
+                    <a href="dining-sets.html" onclick="loadPage('dining-sets')">Dining Sets</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn"
+                    onclick="toggleDropdown(event, 'office')"><b>#Home-Office&#9660;</b></a>
+                <div id="outdoor" class="dropdown-content">
+                    <a href="sets.html" onclick="loadPage('sets')">Sets</a>
+                    <a href="file-cabinets.html" onclick="loadPage('file-cabinets')">File Cabinets</a>
+                    <a href="book-cases.html" onclick="loadPage('book-cases')">Book Cases</a>
+                    <a href="computer-chairs.html" onclick="loadPage('computer-chairs')">Computer Chairs</a>
+                    <a href="office-chairs.html" onclick="loadPage('office-chairs')">Office & Leather Chairs</a>
+                    <a href="computer-desks.html" onclick="loadPage('computer-desks')">Computer Desks</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'decor')"><b>#Decor&#9660;</b></a>
+                <div id="outdoor" class="dropdown-content">
+                    <a href="vases.html" onclick="loadPage('vases')">Decorative Vases</a>
+                    <a href="wall-decors.html" onclick="loadPage('wall-decors')">Wall Art Decors</a>
+                    <a href="wall-clocks.html" onclick="loadPage('wall-clocks')">Wall Clocks</a>
+                    <a href="wall-mirrors.html" onclick="loadPage('wall-mirrors')">Wall Mirrors</a>
+                    <a href="statues.html" onclick="loadPage('statues')">Sculptures & Statues</a>
+                    <a href="room.html" onclick="loadPage('room')">Room Dividers</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <main class="content">
+
+        <div class="image">
+            <h1>Bedsheets</h1>
+        </div>
+
+        <div class="categories">
+            <div class="card">
+                <img src="bedsheet1.jpg" href="bedsheet1.html">
+                <a class="link" href="bedsheet1.html">Nourison Dreamscape Blue Queen Four-Piece Sheet Set</a>
+                <a class="shop-buttons" href="bedsheet1.html">Shop Now</a>
+            </div>
+            <div class="card">
+                <img src="bedsheet2.jpg" href="bedsheet2.html">
+                <a class="link" href="bedsheet2.html">Nourison Dreamscape White Queen Four-Piece Sheet Set</a>
+                <a class="shop-buttons" href="bedsheet2.html">Shop Now</a>
+            </div>
+            <div class="card">
+                <img src="bedsheet3.jpg" href="bedsheet3.html">
+                <a class="link" href="bedsheet3.html">Nourison Dreamscape Grey King Four-Piece Sheet Set
+                </a>
+                <a class="shop-buttons" href="bedsheet3.html">Shop Now</a>
+            </div>
+            <div class="card">
+                <img src="bedsheet4.jpg" href="bedsheet4.html">
+                <a class="link" href="bedsheet4.html">Nourison Dreamscape Blue King Four-Piece Sheet Set</a>
+                <a class="shop-buttons" href="bedsheet4.html">Shop Now</a>
+            </div>
+        </div>
+        <section>
+            <h1>Bed Sheets</h1>
+            <p>The average person spends about a third of their lifespan in bed, making bedding and sheets a great
+                investment in our day-to-day comfort; you never want to skimp on quality when it comes to sheet sets.
+                Sheets add another layer of style and personality to your bedding. LuxeDecor carries some of the best
+                styles in the industry in terms of quality and comfort provided. From high thread count to premium
+                quality materials, you will be sleeping on only the very best bed covers when you purchase them from
+                LuxeDecor.</p>
+
+            <h2>Different Styles and Types of Bed Sheets</h2>
+            <p>There are a number of materials that one should consider when buying luxury sheets such as satin, cotton,
+                and silk, and a number of factors including fiber and weave. The weave affects the way that a sheet
+                feels and impacts its longevity. The number of vertical yarns matters as the larger the number, the
+                softer the fabric will be. LuxeDecor is proud to carry high 600 thread count styles in all sizes
+                including flat, fitted, twin, queen, king, and California king. When it comes to material and fiber,
+                cotton is still considered as the go-to fiber. It is comfortable, all year round and easy to care for.
+                LuxeDecor carries premium sheets made from the finest Egyptian cotton woven in Italy, ensuring you are
+                sleeping on only the very best night after night.</p>
+
+            <h2>Decorating With Bed Sheets In Your Home</h2>
+            <p>There are many ways to decorate with bedding in your home and bedroom. Bed sheets are essential to your
+                bedding for hygienic purposes but are also a great decorative layer. If your duvet cover is patterned,
+                solid styles will be the most stylish complement, but if your duvet or quilt is a neutral or solid shade
+                you can use sheets to add a pop of color, pattern, or print. All sheets at LuxeDecor come in a variety
+                of colors and prints to choose from to give you a chance to showcase your personal style with bedding.
+            </p>
+
+            <p>For more information about bed sheets, read LuxeDecor's Bed Sheet Buying Guide to style a perfect sleep
+                time space.</p>
+        </section>
+
+
+
+
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: LuxeLivingDecor@gmail.com</p>
+                <p>Phone: +91 1123456789</p>
+            </div>
+
+            <div class="social-media">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/luxeliving._india/"><i class="fa fa-instagram"
+                                aria-hidden="true"></i> Instagram</a></li>
+                    <li><a href="https://twitter.com/luxelivingindia"><i class="fa fa-twitter"></i> Twitter</a></li>
+                    <li><a href="https://www.facebook.com/luxelivingdecor"><i class="fa fa-facebook"></i> Facebook</a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/company/luxe-living-india"><i class="fa fa-linkedin-square"
+                                aria-hidden="true"></i> LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 LuxeLiving Decor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+
+</html>

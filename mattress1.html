@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="sofa1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <!-- First Navbar: Logo, Search Bar, Sign Up/Login -->
+        <div class="top-navbar">
+            <div class="logo">
+                <a href="home.html" onclick="loadPage('home')">
+                    <img src="https://res.cloudinary.com/dgccnrp7w/image/upload/v1720818573/logo_ecom_oducaz.png"
+                        alt="Logo" id="logo">
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search...">
+                <button type="button" id="search-button">Search</button>
+            </div>
+            <div class="auth-buttons">
+                <button type="button">Sign Up</button>
+                <button type="button">Log In</button>
+            </div>
+        </div>
+
+        <!-- Second Navbar: Categories -->
+        <div class="bottom-navbar">
+            <nav>
+                <ul>
+                    <li class="left"><a href="#" onclick="togglePopup()"><i class="fa fa-bars" aria-hidden="true"></i>
+                            All</a></li>
+                    <li>
+                        <a href="home.html" onclick="loadPage('home')"><i class="fa fa-home" aria-hidden="true"></i>
+                            Home</a>
+                    </li>
+                    <li class="center"><a href="living-room.html" onclick="loadPage('living-room')">Living Room</a></li>
+                    <li class="center"><a href="bed-room.html" onclick="loadPage('bedroom')">Bedroom</a></li>
+                    <li class="center"><a href="kitchen.html" onclick="loadPage('kitchen')">Kitchen & bathroom</a></li>
+                    <li class="center"><a href="dining-room.html" onclick="loadPage('dining')">Dining Room</a></li>
+                    <li class="center"><a href="home-office.html" onclick="loadPage('office')">Home-Office</a></li>
+                    <li class="center"><a href="decor.html" onclick="loadPage('decor')">Decor</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Popup Menu -->
+    <div id="popup-menu" class="popup-menu">
+        <ul>
+            <li class="dropdown">
+                <a href="living-room.html" class="dropdown-btn"
+                    onclick="toggleDropdown(event, 'living-room')"><b>#Living-Room &#9660;</b></a>
+                <div id="living-room" class="dropdown-content">
+                    <a href="sofa.html" onclick="loadPage('sofas')">Sofas</a>
+                    <a href="tvstands.html" onclick="loadPage('tv-stands')">Tv-stands</a>
+                    <a href="tables.html" onclick="loadPage('tables')">Tables</a>
+                    <a href="lightings.html" onclick="loadPage('lightings')">Lightings</a>
+                    <a href="ottomas.html" onclick="loadPage('ottomans')">Ottomans & poufs</a>
+                    <a href="rugs.html" onclick="loadPage('rugs')">Rugs</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'bedroom')"><b>#Bedroom&#9660;</b></a>
+                <div id="bedroom" class="dropdown-content">
+                    <a href="bedsheets.html" onclick="loadPage('bedsheets')">Bedsheets</a>
+                    <a href="pillows.html" onclick="loadPage('pillows')">Throw Pillows</a>
+                    <a href="beds.html" onclick="loadPage('beds')">Beds</a>
+                    <a href="mattresses.html" onclick="loadPage('mattresses')">Mattresses</a>
+                    <a href="mirrors.html" onclick="loadPage('mirrors')">Mirrors</a>
+                    <a href="vanites.html" onclick="loadPage('vanites')">vanites</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'kitchen')"><b>#Kitchen &
+                        bathroom&#9660;</b></a>
+                <div id="kitchen" class="dropdown-content">
+                    <a href="faucets.html" onclick="loadPage('faucets')">Faucets</a>
+                    <a href="showers.html" onclick="loadPage('showers')">Showers</a>
+                    <a href="bathroom-faucets.html" onclick="loadPage('bathroom-faucets')">Bathroom Faucets</a>
+                    <a href="stainless-steel-sinks.html" onclick="loadPage('stainless-steel-sinks')">Stainless Steel
+                        Sinks</a>
+                    <a href="vanities.html" onclick="loadPage('vanities')">Vanities</a>
+                    <a href="stone-sinks.html" onclick="loadPage('stone-sinks')">Stone Sinks</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'dining')"><b>#Dining
+                        Room&#9660;</b></a>
+                <div id="office" class="dropdown-content">
+                    <a href="dining-tables.html" onclick="loadPage('dining-tables')">Dining Tables</a>
+                    <a href="buffet-tables.html" onclick="loadPage('buffet-tables')">Buffet Tables</a>
+                    <a href="display-cabinets.html" onclick="loadPage('display-cabinets')">Display Cabinets</a>
+                    <a href="kitchen-carts.html" onclick="loadPage('kitchen-carts')">Kitchen Carts</a>
+                    <a href="dining-chairs.html" onclick="loadPage('dining-chairs')">Dining Chairs</a>
+                    <a href="dining-sets.html" onclick="loadPage('dining-sets')">Dining Sets</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn"
+                    onclick="toggleDropdown(event, 'office')"><b>#Home-Office&#9660;</b></a>
+                <div id="outdoor" class="dropdown-content">
+                    <a href="sets.html" onclick="loadPage('sets')">Sets</a>
+                    <a href="file-cabinets.html" onclick="loadPage('file-cabinets')">File Cabinets</a>
+                    <a href="book-cases.html" onclick="loadPage('book-cases')">Book Cases</a>
+                    <a href="computer-chairs.html" onclick="loadPage('computer-chairs')">Computer Chairs</a>
+                    <a href="office-chairs.html" onclick="loadPage('office-chairs')">Office & Leather Chairs</a>
+                    <a href="computer-desks.html" onclick="loadPage('computer-desks')">Computer Desks</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'decor')"><b>#Decor&#9660;</b></a>
+                <div id="outdoor" class="dropdown-content">
+                    <a href="vases.html" onclick="loadPage('vases')">Decorative Vases</a>
+                    <a href="wall-decors.html" onclick="loadPage('wall-decors')">Wall Art Decors</a>
+                    <a href="wall-clocks.html" onclick="loadPage('wall-clocks')">Wall Clocks</a>
+                    <a href="wall-mirrors.html" onclick="loadPage('wall-mirrors')">Wall Mirrors</a>
+                    <a href="statues.html" onclick="loadPage('statues')">Sculptures & Statues</a>
+                    <a href="room.html" onclick="loadPage('room')">Room Dividers</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <main class="content">
+
+        <div class="main-page-content">
+            <div class="left-half">
+                <img src="mattress1.jpg">
+            </div>
+            <div class="right-half">
+               <a href="mattress1.html" class="heading">Royal-Pedic 3'' Pillowtop Pad</a>
+                <p>RPRPACPP3<br>
+                    by  Royal-Pedic  from  Classic</p>
+                <p class="price"><h1>&#8377;6650</h1></p>
+                <p class="cut-price"><span class="cut-off">&#8377;9500</span> <span>10% Off</span></p>
+                <span><h1>On Sale</h1></span>
+                <p class="description">
+                   <h3>FREE Shipping</h3>
+                   <p>Ships within 2 to 3 weeks</p>
+                   <h2>Special Order</h2>
+                </p>
+                <div class="favorites">
+                <button class="fav">Add to Cart</button>
+
+                <i class="fa fa-heart"></i>
+
+                </div>
+            </div>
+        </div>
+        <section>
+            <h1>Introduction to Mattresses</h1>
+            <p>If you have problems with tossing and turning in the middle of the night, you are most likely sleeping on the wrong mattress. The key to a good night’s sleep truly lies in the quality of your mattress. There are a variety of mattresses for sale to choose from at LuxeDecor that can offer you the exact features you are looking for. Depending if you are a side sleeper, back sleeper, or you sleep on your stomach, there’s a wide selection of mattresses for sale at LuxeDecor.</p>
+        
+            <h2>Different Styles and Types of Mattresses</h2>
+            <p>Twin mattresses are perfect for children and teenagers, and in case your children are experiencing a growth spurt, twin XL mattresses are also available that offer extra length. Full size mattresses and queen size mattresses are the most popular sizes and are available in many different materials. From coil to latex to gel and foam mattresses, there are many types to choose from at LuxeDecor. Memory foam mattresses are also available at LuxeDecor. These types of mattress for sale hug and hold your body, and don’t block pressure points. Foam styles from Royal Pedic are perfect for relieving pressure points especially among those who’ve had back surgeries or broken bones. Gel mattresses from Restonic have a cooling effect on the body and help to regulate temperature while you sleep. Gel styles are firm but still help to relieve pressure. Latex mattresses for sale are weight sensitive not heat sensitive, offering quick shape recovery.</p>
+        
+            <h2>The Benefits of Mattresses</h2>
+            <p>There are many benefits that come from investing in quality top rated mattresses. If you sleep on your stomach, you can benefit from purchasing a firmer style to support your body. If you are a side sleeper, you need to choose a style that your curves can fit into so look for average levels of firmness, and consider investing in a plush pillow top. If you are a back sleeper, look for a happy medium of softness. Softer queen styles typically have three inches of latex, medium firmness comes from two inches of latex, and if you are looking for firm king size styles you should select no more than one inch of latex.</p>
+        
+            <p>To learn more about mattresses, including different sizes, construction, features, and care, read LuxeDecor's Mattress Buying Guide.</p>
+        </section>
+        
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: LuxeLivingDecor@gmail.com</p>
+                <p>Phone: +91 1123456789</p>
+            </div>
+
+            <div class="social-media">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/luxeliving._india/"><i class="fa fa-instagram"
+                                aria-hidden="true"></i> Instagram</a></li>
+                    <li><a href="https://twitter.com/luxelivingindia"><i class="fa fa-twitter"></i> Twitter</a></li>
+                    <li><a href="https://www.facebook.com/luxelivingdecor"><i class="fa fa-facebook"></i> Facebook</a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/company/luxe-living-india"><i class="fa fa-linkedin-square"
+                                aria-hidden="true"></i> LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 LuxeLiving Decor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+
+</html>

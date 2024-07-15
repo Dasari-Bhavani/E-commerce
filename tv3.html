@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="sofa1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <!-- First Navbar: Logo, Search Bar, Sign Up/Login -->
+        <div class="top-navbar">
+            <div class="logo">
+                <a href="home.html" onclick="loadPage('home')">
+                    <img src="https://res.cloudinary.com/dgccnrp7w/image/upload/v1720818573/logo_ecom_oducaz.png"
+                        alt="Logo" id="logo">
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search...">
+                <button type="button" id="search-button">Search</button>
+            </div>
+            <div class="auth-buttons">
+                <button type="button">Sign Up</button>
+                <button type="button">Log In</button>
+            </div>
+        </div>
+
+        <!-- Second Navbar: Categories -->
+        <div class="bottom-navbar">
+            <nav>
+                <ul>
+                    <li class="left"><a href="#" onclick="togglePopup()"><i class="fa fa-bars" aria-hidden="true"></i>
+                            All</a></li>
+                    <li>
+                        <a href="home.html" onclick="loadPage('home')"><i class="fa fa-home" aria-hidden="true"></i>
+                            Home</a>
+                    </li>
+                    <li class="center"><a href="living-room.html" onclick="loadPage('living-room')">Living Room</a></li>
+                    <li class="center"><a href="bed-room.html" onclick="loadPage('bedroom')">Bedroom</a></li>
+                    <li class="center"><a href="kitchen.html" onclick="loadPage('kitchen')">Kitchen & bathroom</a></li>
+                    <li class="center"><a href="dining-room.html" onclick="loadPage('dining')">Dining Room</a></li>
+                    <li class="center"><a href="home-office.html" onclick="loadPage('office')">Home-Office</a></li>
+                    <li class="center"><a href="decor.html" onclick="loadPage('decor')">Decor</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Popup Menu -->
+    <div id="popup-menu" class="popup-menu">
+        <ul>
+            <li class="dropdown">
+                <a href="living-room.html" class="dropdown-btn"
+                    onclick="toggleDropdown(event, 'living-room')"><b>#Living-Room &#9660;</b></a>
+                <div id="living-room" class="dropdown-content">
+                    <a href="sofa.html" onclick="loadPage('sofas')">Sofas</a>
+                    <a href="tvstands.html" onclick="loadPage('tv-stands')">Tv-stands</a>
+                    <a href="tables.html" onclick="loadPage('tables')">Tables</a>
+                    <a href="lightings.html" onclick="loadPage('lightings')">Lightings</a>
+                    <a href="ottomas.html" onclick="loadPage('ottomans')">Ottomans & poufs</a>
+                    <a href="rugs.html" onclick="loadPage('rugs')">Rugs</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'bedroom')"><b>#Bedroom&#9660;</b></a>
+                <div id="bedroom" class="dropdown-content">
+                    <a href="bedsheets.html" onclick="loadPage('bedsheets')">Bedsheets</a>
+                    <a href="pillows.html" onclick="loadPage('pillows')">Throw Pillows</a>
+                    <a href="beds.html" onclick="loadPage('beds')">Beds</a>
+                    <a href="mattresses.html" onclick="loadPage('mattresses')">Mattresses</a>
+                    <a href="mirrors.html" onclick="loadPage('mirrors')">Mirrors</a>
+                    <a href="vanites.html" onclick="loadPage('vanites')">vanites</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'kitchen')"><b>#Kitchen &
+                        bathroom&#9660;</b></a>
+                <div id="kitchen" class="dropdown-content">
+                    <a href="faucets.html" onclick="loadPage('faucets')">Faucets</a>
+                    <a href="showers.html" onclick="loadPage('showers')">Showers</a>
+                    <a href="bathroom-faucets.html" onclick="loadPage('bathroom-faucets')">Bathroom Faucets</a>
+                    <a href="stainless-steel-sinks.html" onclick="loadPage('stainless-steel-sinks')">Stainless Steel
+                        Sinks</a>
+                    <a href="vanities.html" onclick="loadPage('vanities')">Vanities</a>
+                    <a href="stone-sinks.html" onclick="loadPage('stone-sinks')">Stone Sinks</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'dining')"><b>#Dining
+                        Room&#9660;</b></a>
+                <div id="office" class="dropdown-content">
+                    <a href="dining-tables.html" onclick="loadPage('dining-tables')">Dining Tables</a>
+                    <a href="buffet-tables.html" onclick="loadPage('buffet-tables')">Buffet Tables</a>
+                    <a href="display-cabinets.html" onclick="loadPage('display-cabinets')">Display Cabinets</a>
+                    <a href="kitchen-carts.html" onclick="loadPage('kitchen-carts')">Kitchen Carts</a>
+                    <a href="dining-chairs.html" onclick="loadPage('dining-chairs')">Dining Chairs</a>
+                    <a href="dining-sets.html" onclick="loadPage('dining-sets')">Dining Sets</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn"
+                    onclick="toggleDropdown(event, 'office')"><b>#Home-Office&#9660;</b></a>
+                <div id="outdoor" class="dropdown-content">
+                    <a href="sets.html" onclick="loadPage('sets')">Sets</a>
+                    <a href="file-cabinets.html" onclick="loadPage('file-cabinets')">File Cabinets</a>
+                    <a href="book-cases.html" onclick="loadPage('book-cases')">Book Cases</a>
+                    <a href="computer-chairs.html" onclick="loadPage('computer-chairs')">Computer Chairs</a>
+                    <a href="office-chairs.html" onclick="loadPage('office-chairs')">Office & Leather Chairs</a>
+                    <a href="computer-desks.html" onclick="loadPage('computer-desks')">Computer Desks</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn" onclick="toggleDropdown(event, 'decor')"><b>#Decor&#9660;</b></a>
+                <div id="outdoor" class="dropdown-content">
+                    <a href="vases.html" onclick="loadPage('vases')">Decorative Vases</a>
+                    <a href="wall-decors.html" onclick="loadPage('wall-decors')">Wall Art Decors</a>
+                    <a href="wall-clocks.html" onclick="loadPage('wall-clocks')">Wall Clocks</a>
+                    <a href="wall-mirrors.html" onclick="loadPage('wall-mirrors')">Wall Mirrors</a>
+                    <a href="statues.html" onclick="loadPage('statues')">Sculptures & Statues</a>
+                    <a href="room.html" onclick="loadPage('room')">Room Dividers</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <main class="content">
+
+        <div class="main-page-content">
+            <div class="left-half">
+                <img src="tv3.jpg">
+            </div>
+            <div class="right-half">
+               <a href="tv3.html" class="heading">Unique Furniture Nola 75" Black Oak Media Console
+            </a>
+                <p>JENOLA4625<br>
+                    by  Unique Furniture  from  Nola</p>
+                <p class="price"><h1>&#8377;39,052</h1></p>
+                <p class="cut-price"><span class="cut-off">&#8377;45943</span> <span>15% Off</span></p>
+                <span><h1>On Sale</h1></span>
+                <p class="description">
+                   <h3>FREE Shipping</h3>
+                   <p>Ships within 1 to 3 Business Days</p>
+                   <h2>50+ In Stock</h2>
+                </p>
+                <div class="favorites">
+                <button class="fav">Add to Cart</button>
+                <!-- <i class="fa-solid fa-heart"></i> -->
+
+                <i class="fa fa-heart"></i>
+
+                </div>
+            </div>
+        </div>
+
+        <section class="tv-stands-info">
+            <h1>Introduction to TV Stands</h1>
+            <p>Most home entertainment cabinets are found in dining rooms or living rooms, and feature a TV as the primary entertainment focus. A TV cabinet is an important addition to your living space. It presents your TV in a context that makes it harmonize with the room’s decor. Once you've invested in a stunning, big screen TV, the best way to show it off to family, friends, and party guests is to house it in a luxury TV cabinet available from LuxeDecor.</p>
+        
+            <p>TV stands and entertainment centers are an essential part of the furniture plan for your home. Even though TVs can hang on walls, many people still prefer using a TV stand that doubles as a piece of furniture. A TV can bring people together to watch sports, a movie, a tv show, or some other event. Entertainment centers can also be found in dining rooms, bedrooms, or theaters, and you need the right one to make your viewing experience unforgettable. If you invest in a large screen TV, make sure you have the right piece of living room furniture to show it off. Here’s what you should know if you have trouble finding the best TV stands for your needs.</p>
+        
+            <h2>Before You Buy</h2>
+            <p>There are a number of factors that can influence your choice of the TV cabinet and a number of practical things to consider. Here are a few important things to look at before buying:</p>
+        
+            <p>The first consideration is your budget. A TV console can be a significant investment. That is why it is important to know what you can afford before you consider your entertainment center options. When you are on a tight budget, it may be a good idea to stay away from expensive luxury furniture. Even though they may be fun to look at, they probably will not help you make a decision. It would be best if you only looked at the items that are in your budget. It would be best if you considered the other things in the living room and the TV before you begin looking for a media console.</p>
+        
+            <p>Consider the size of your living room space or where you want to place the TV console. It is important to determine how large the TV is that you want to place on a TV stand. Your TV size is really important. You should also consider the size of the space where you want to place the stand. If you have a corner in the living room, you might want to consider a corner tv stand. Space is a major consideration when wanting a modern TV stand or an entertainment center.</p>
+        
+            <p>Consider the color and style of your living room or whatever room you want to place the TV stand. You should think about how the stand will look up against the rest of the furniture in the living room. We offer many designs and styles to choose from. You should consider getting a TV stand that matches the decor in your home.</p>
+        
+            <p>Style is an essential part of selecting your TV stand. There exist many styles of TV stands and entertainment centers for your living room, dining room, or bedroom. No matter your style, whether it is a traditional or modern look, there is a TV stand or an entertainment center for you. Decide on the look you want your decor to have before buying family room furniture and look for pieces that fit with that aesthetic.</p>
+        
+            <h2>Features to Consider</h2>
+            <p>While style is essential when looking for a small TV stand or a tall TV stand, you also want to think about the features that they offer including:</p>
+        
+            <p>Height. Once you decide where you want to place the TV stand, you should consider how high you want it to be. There are many options when it comes to the height of an entertainment center. This includes, but is not limited to, a 65 inch TV stand, a 70 inch TV stand, and a 75 inch TV stand. It also depends on the screen size of your TV. Larger TV screens require larger or sturdier TV stands.</p>
+        
+            <p>Mounts. A TV stand with a mount has an entirely different look than what you might expect. This is similar to a floating TV stand. This is a great way to keep your TV safe and stable for excellent watching. The TV stands are also adjustable and swivel, making it simple to get the best angle to watch.</p>
+        
+            <p>Shelves and Side Cabinets. Some television stands and entertainment centers come with shelves or side cabinets for storage space. Those with cabinets can go with or without cabinet doors. Depending on what you plan to store in your TV stand (maybe your collection of DVDs or your gaming consoles), that can dictate what kind of shelves or cabinets you want and if you want them to be moveable. Consider cable management as well.</p>
+        
+            <p>Color. TV stands and entertainment centers can come in various colors and designs. You should consider the decor of your home when you purchase your entertainment center. You can find a black TV stand, a white TV stand, or many other colors. Make sure the color of the TV stand matches the color of your living room walls.</p>
+        
+            <p>Material. There are a large number of materials that are used for TV stands, including:</p>
+            <ul>
+                <li>Wood. If you are looking for something traditional and timeless, then a wood corner TV unit may be the one you want.</li>
+                <li>Glass. A glass TV stand is becoming more popular as an option for homes. They are typically made of reinforced glass that appears to be transparent.</li>
+                <li>Metal. A metal TV stand is lightweight but sturdy and usually comes with a slimmer profile. More modern TV stands are made from metal.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: LuxeLivingDecor@gmail.com</p>
+                <p>Phone: +91 1123456789</p>
+            </div>
+
+            <div class="social-media">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/luxeliving._india/"><i class="fa fa-instagram"
+                                aria-hidden="true"></i> Instagram</a></li>
+                    <li><a href="https://twitter.com/luxelivingindia"><i class="fa fa-twitter"></i> Twitter</a></li>
+                    <li><a href="https://www.facebook.com/luxelivingdecor"><i class="fa fa-facebook"></i> Facebook</a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/company/luxe-living-india"><i class="fa fa-linkedin-square"
+                                aria-hidden="true"></i> LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 LuxeLiving Decor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+
+</html>
