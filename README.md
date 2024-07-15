@@ -67,10 +67,10 @@ Decor Page:=>
 
 
 Features:=>
--Responsive Design: The website is fully responsive, providing an optimal viewing experience on desktops, tablets, and smartphones.
--User-Friendly Navigation: Intuitive navigation allows users to easily browse categories and find products.
--Secure Payment: Offers secure payment options to ensure a safe and smooth checkout process.
--Customer Support: Dedicated support team available to assist with any inquiries or issues.
+>Responsive Design: The website is fully responsive, providing an optimal viewing experience on desktops, tablets, and smartphones.
+>User-Friendly Navigation: Intuitive navigation allows users to easily browse categories and find products.
+>Secure Payment: Offers secure payment options to ensure a safe and smooth checkout process.
+>Customer Support: Dedicated support team available to assist with any inquiries or issues.
 
 
 Conclusion:=>
